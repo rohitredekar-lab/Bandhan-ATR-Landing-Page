@@ -1,0 +1,82 @@
+/*******************************************************************************
+ * Strictly Confidential Information. All rights reserved with Finarya Tech Private Limited.
+ *
+ * DO NOT ALTER OR REMOVE CONFIDENTIAL INFORMATION NOTICES OR THIS FILE HEADER.
+ *******************************************************************************/
+$(function() {
+	var token = $("meta[name='_csrf']").attr("content");
+	var header = $("meta[name='_csrf_header']").attr("content");
+	$(document).ajaxSend(function(e, xhr, options) {
+		xhr.setRequestHeader(header, token);
+	});
+});
+
+$(document).ready(function() {
+	$('#advancebtnFiledsvisible').click(function() {
+		$(".advanceFieldsToggle").fadeToggle();
+		$(this).text(function(i, v) {
+			return v === 'Show Less' ? 'Additional Fields' : 'Show Less'
+		})
+	});
+
+	$('#advancebtnFiledsvisibleforIncidentManagment').click(function() {
+		$(".advanceFieldsToggleIncidentManagment").fadeToggle();
+		$(this).text(function(i, v) {
+			return v === 'Show Less' ? 'Additional Fields' : 'Show Less'
+		})
+	});
+});
+
+function captureBug() {
+	$('#status').fadeIn(); // will first fade out the loading animation 
+	$('#preloader').fadeIn('fast');
+	console.log("get screenshot of browser");
+	html2canvas(document.body).then(function(canvas) {
+		console.log("canvas details : " + canvas);
+		let imagedata = canvas.toDataURL('image/png');
+		uploadFileOnServer(imagedata);
+		//return Canvas2Image.saveAsPNG(canvas);
+	});
+	$('#status').fadeOut(); // will first fade out the loading animation 
+	$('#preloader').delay(350).fadeOut('slow');
+}
+
+function uploadFileOnServer(imgdata) {
+	let form_data = new FormData();
+	form_data.append("base64Image", imgdata);
+	console.log(form_data);
+	let url = window.location.href;
+	$.ajax({
+		type: "POST",
+		enctype: 'multipart/form-data',
+		url: "/api/upload/bug",
+		data: form_data,
+		processData: false,
+		contentType: false,
+		cache: false,
+		timeout: 600000,
+		success: function(data) {
+			console.log("SUCCESS : ", data);
+			var obj = JSON.parse(data);
+			console.log("uploaded id : ", obj.id);
+			window.open("/showCreateSystemObservationPage?uploadFileId=" + obj.id+"&url="+url, "_blank");
+		},
+		error: function(e) {
+			console.log("ERROR : ", e);
+		}
+	});
+}
+
+$(document).ready(function() {
+	if ($(window).width() <= 467) {
+		$('body').removeClass('nav-function-top');
+		$('body').removeClass('header-function-fixed');
+		$('body').removeClass('nav-function-fixed');
+	}
+	
+	if ($(window).width() <= 789) {
+		$('body').removeClass('nav-function-top');
+		$('body').removeClass('header-function-fixed');
+		$('body').removeClass('nav-function-fixed');
+	}
+});

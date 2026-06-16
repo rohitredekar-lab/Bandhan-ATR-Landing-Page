@@ -1,0 +1,191 @@
+/*******************************************************************************
+ * Strictly Confidential Information. All rights reserved with Finarya Tech Private Limited.
+ *
+ * DO NOT ALTER OR REMOVE CONFIDENTIAL INFORMATION NOTICES OR THIS FILE HEADER.
+ *******************************************************************************/
+
+ /*  var logoutUser = false;
+   var timeoutHnd = null;
+   var logoutNoResponse = null;
+   var logouTimeInterval = 28800000; // 8 hours
+   function onuser_activite() {
+       if (!logoutUser) {
+          ResetLogOutTimer();
+       }
+   }
+   function OnTimeoutReached() {
+	   setHardLogout();
+       Swal.fire({
+			title: 'Alert.',
+			showDenyButton: true,
+		  	showCancelButton: true,
+			html: 'You have been idle for more than 8 hours. Click Yes to keep session alive!',
+			icon: 'error',
+			confirmButtonText: 'Yes',
+			denyButtonText: 'No',
+		}).then((result) => {
+			console.log(result);
+		  if (result.value) {
+			clearTimeout(logoutNoResponse);
+			$.ajax({
+				type: "GET",
+				url:"/updateSession",
+				success: function(resp)
+				{
+					console.log(resp);
+				},
+				error: function(resp)
+				{
+					console.log(resp);
+				}
+			});
+		  } else if (result.dismiss === 'cancel') {
+			logoutUser = true;
+			clearTimeout(logoutNoResponse);
+			window.location.href = getContextPath() + "/logout";
+		  }
+		});
+       
+
+   }
+   function ResetLogOutTimer() {
+       clearTimeout(timeoutHnd);
+       // set new timer
+       timeoutHnd = setTimeout('OnTimeoutReached();', logouTimeInterval);
+   }
+   
+   function setHardLogout(){
+	   logoutNoResponse = setTimeout('logoutUserFn();', 15000);
+   }
+   function logoutUserFn(){
+	   logoutUser = true;
+	   window.location.href = getContextPath() + "/logout";
+   }
+
+   document.body.onclick = onuser_activite;
+   timeoutHnd = setTimeout('OnTimeoutReached();', logouTimeInterval);*/
+   
+   /*var logoutUser = false;
+     	  var timeoutHnd = null;
+     	  //var logouTimeInterval = 900000; // 15 minutes
+     	  var logouTimeInterval = 60000 ; // 1 minute for testing
+
+     	  function onUserActivity() {
+     	      if (!logoutUser) {
+     	          resetLogoutTimer();
+     	      }
+     	  }
+
+     	  function onTimeoutReached() {
+     	      logoutUser = true;
+
+     	      Swal.fire({
+     	          title: 'Session Expired',
+     	          text: 'You have been idle for 15 minutes. You will now be logged out due to inactivity.',
+     	          icon: 'warning',
+     	          confirmButtonText: 'OK',
+     	          allowOutsideClick: false,
+     	          allowEscapeKey: false
+     	      }).then(() => {
+     	          window.location.href = getContextPath() + "/logout";
+     	      });
+     	  }
+
+     	  function resetLogoutTimer() {
+     	      clearTimeout(timeoutHnd);
+     	      timeoutHnd = setTimeout(onTimeoutReached, logouTimeInterval);
+     	  }
+
+     	  // Initialize on any activity
+     	  document.body.onclick = onUserActivity;
+     	  document.body.onmousemove = onUserActivity;
+     	  document.body.onkeydown = onUserActivity;
+
+     	  // Start initial timer
+     	  timeoutHnd = setTimeout(onTimeoutReached, logouTimeInterval);
+
+     	  //logout when user closes browser tab
+     	  window.addEventListener('beforeunload', function () {
+     	      fetch(getContextPath() + "/logout", { method: 'GET', keepalive: true });
+     	  });*/
+		  
+		    //Session Timeout Code.
+		    var logoutUser = false;
+		    var timeoutHnd = null;
+		    var logouTimeInterval = 900000; // 15 minutes
+		   // var logouTimeInterval = 60000 ; // 1 minute for testing
+
+		    function onUserActivity() {
+		        if (!logoutUser) {
+		            resetLogoutTimer();
+		        }
+		    }
+
+		    function onTimeoutReached() {
+		        logoutUser = true;
+
+		        Swal.fire({
+		            title: 'Session Expired',
+		            text: 'You have been idle for 15 minutes. You will now be logged out due to inactivity.',
+		            icon: 'warning',
+		            confirmButtonText: 'OK',
+		            allowOutsideClick: false,
+		            allowEscapeKey: false
+		        }).then(() => {
+		            window.location.href = getContextPath() + "/logout";
+		        });
+		    }
+
+		    function resetLogoutTimer() {
+		        clearTimeout(timeoutHnd);
+		        timeoutHnd = setTimeout(onTimeoutReached, logouTimeInterval);
+		    }
+
+		    // Initialize on any activity
+		    document.body.onclick = onUserActivity;
+		    document.body.onmousemove = onUserActivity;
+		    document.body.onkeydown = onUserActivity;
+
+		    // Start initial timer
+		    timeoutHnd = setTimeout(onTimeoutReached, logouTimeInterval);
+
+		    /*// Set a flag in sessionStorage before unload
+		    window.addEventListener('beforeunload', function () {
+		        sessionStorage.setItem('logoutPending', 'true');
+		        setTimeout(() => {
+		            if (sessionStorage.getItem('logoutPending') === 'true') {
+		                navigator.sendBeacon(getContextPath() + "/logout");
+		            }
+		        }, 1000);
+		    });
+
+		    // On load, clear the flag if it's a refresh
+		    window.addEventListener('load', function () {
+		        sessionStorage.removeItem('logoutPending');
+		    });*/
+		    /*window.addEventListener('beforeunload', function () {
+		        const navType = performance.getEntriesByType("navigation")[0]?.type;
+		        if (navType !== 'reload' && navType !== 'back_forward') {
+		            navigator.sendBeacon(getContextPath() + "/logout");
+		        }
+		    });*/
+
+		    //fixed session management when users clicks back/forward arrows and reload page user is not getting logged out now
+		    document.addEventListener('click', function(e) {
+		        if (e.target.tagName === 'A' && (e.target.target === '_blank' || e.ctrlKey || e.metaKey)) {
+		            sessionStorage.setItem('suppressLogout', 'true');
+		            setTimeout(() => sessionStorage.removeItem('suppressLogout'), 1000);
+		        }
+		    });
+
+		    // Handle beforeunload
+		    window.addEventListener('beforeunload', function(e) {
+		        const isSuppressed = sessionStorage.getItem('suppressLogout') === 'true';
+		        const navEntry = performance.getEntriesByType("navigation")[0];
+		        const isReload = navEntry?.type === 'reload';
+		        const isBackForward = navEntry?.type === 'back_forward';
+
+		        if (!isSuppressed && !isReload && !isBackForward) {
+		            navigator.sendBeacon(getContextPath() + "/logout");
+		        }
+		    });

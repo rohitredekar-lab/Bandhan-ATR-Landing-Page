@@ -1,0 +1,106 @@
+@media only screen and (max-width: 576px) {
+	/* #header .csi-rm-page-header {
+		padding-left: 1rem !important;
+	} */
+	.header-btn[data-class='mobile-nav-on'] {
+		border-color: #fff !important;
+		background: transparent !important;
+		color: #fff !important;
+		width: 3.875rem !important;
+	}
+	.page-logo .csi-rm-logo-finarya {
+		width: 172px !important;
+		background: #fff !important;
+		padding: 9px !important;
+	}
+	.page-logo {
+		padding-left: 0px !important;
+		background: #fff !important;
+	}
+	.csi-ethical-logo {
+		width: 215px !important;
+	}
+	/* .card-title img {
+		width: 100px !important;
+	} */
+	.dashboard-cards .divflex_card_title {
+		width: 108px;
+		/* margin-top: 25px; */
+		color: #1375be !important;
+	}
+	/* .dashboard-cards .card-title .csi_img_audit_logo {
+		width: 100px !important;
+	} */
+	/* .page-footer {
+		position: fixed !important;
+		left: 0 !important;
+		right: 0 !important;
+		bottom: 0 !important;
+	} */
+	.csi_resposive_logo_1707 {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+
+
+
+@media only screen and (max-width: 992px) {
+	/* #header .csi-rm-page-header {
+		padding-left: 1rem !important;
+	} */
+}
+
+.hidden-lg-up {
+	margin-left: 1rem !important;
+}
+
+
+.csi_question_marks_toltips {
+	width: 13px;
+	margin-left: 1px;
+}
+
+@media ( min-width : 992px) {
+	.nav-function-hidden:not(.nav-function-top ) .page-header[data-class="nav-function-hidden"]{
+		background: #4d483300 !important;
+		border-color: #ffffff !important;
+		-webkit-box-shadow: inset 0 0 3px 1px rgba(0, 0, 0, 0.37);
+		box-shadow: inset 0 0 3px 1px rgba(60, 52, 52, 0) !important;
+		color: #fff !important;
+	}
+}
+
+@media ( min-width : 992px) {
+	.nav-function-hidden:not(.nav-function-top ) .page-header [data-class="nav-function-hidden"]
+		{
+		background: #4d483300 !important;
+		border-color: #ffffff !important;
+		-webkit-box-shadow: inset 0 0 3px 1px rgba(0, 0, 0, 0.37);
+		box-shadow: inset 0 0 3px 1px rgba(60, 52, 52, 0) !important;
+		color: #fff !important;
+	}
+	.csi_resposive_logo_1707 {
+		display: flex !important;
+		justify-content: center !important;
+	}
+}
+
+/* @media ( min-width : 1399px) {
+	.csi_landing_page_container {
+		max-width: 1140px !important;
+	}
+
+}
+@media ( max-width : 768px) {
+	.csi_landing_page_container {
+		max-width: 977px;
+	}
+	.csi_img_audit_logo {
+		    width: 90px;
+	}
+}
+ */
+
+

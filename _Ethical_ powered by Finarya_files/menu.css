@@ -1,0 +1,19 @@
+.dataTables_scrollHeadInner {
+	width: 100% !important;
+}
+
+
+.nav-function-top .page-sidebar .primary-nav .nav-menu>li>ul {
+	width: 17rem !important;
+	background: #fff !important;
+	font-size: 13px !important;
+}
+
+
+
+/* 
+.nav-function-top .page-sidebar .primary-nav .nav-menu>li>ul li:hover>a
+	{
+	background: rgb(33 150 243/ 10%) !important;
+	color: #1a6ab3 !important;
+} */

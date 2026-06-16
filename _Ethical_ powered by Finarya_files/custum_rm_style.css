@@ -1,0 +1,42 @@
+.csi-rm-link-text {
+	color: #1a6ab3 !important;
+	width: 100% !important;
+}
+
+.nav-function-top .page-sidebar .primary-nav .nav-menu>li>ul {
+	background-color: #fff !important;
+}
+
+.nav-function-top .page-sidebar .primary-nav .nav-menu>li>ul:before {
+	color: #fff !important;
+}
+
+.csi_navbar_menu_1607 .fa-angle-left, .fa-angle-right, .fa-angle-down {
+	color: #1a6ab3 !important;
+}
+
+.csi-rm-link-icon {
+	color: #1a6ab3 !important;
+	width: 20px !important;
+}
+
+.nav-function-top .page-sidebar .primary-nav .nav-menu>li a {
+	color: #1a6ab3 !important;
+}
+
+/* .finarya_rm_landing_page_ul_sidebar{
+	width: 270px !important;
+}
+ */
+
+@media only screen and (min-device-width : 768px) and (max-device-width:
+	1024px) {
+	.csi_resposive_logo_1707 {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+.nav-function-top .page-sidebar .primary-nav .nav-menu>li>.right-side-fixed:before{
+    margin-left: 10rem !important;
+}

@@ -1,0 +1,39 @@
+$.ajaxSetup({
+	beforeSend: function(jqXHR, settings) {
+		if (settings.data != undefined) {
+			//settings.data = sanitizeInput(settings.data);
+			return true;
+		}
+	}
+});
+
+function sanitizeInput(inputString) {
+	const map = {
+		'&': '&amp;',
+		'<': '&lt;',
+		'>': '&gt;',
+		'"': '&quot;',
+		"'": '&#x27;',
+		"/": '&#x2F;',
+	};
+	const reg = /[&<>"'/]/ig;
+	return inputString.replace(reg, (match) => (map[match]));
+}
+
+function testXssAjax(){
+	$.ajax({
+			type: "POST",
+			dataType: 'json',
+			contentType: 'application/json',
+			url: "https://google.com/submitDepartment",
+			data: JSON.stringify({}),
+			success: function(resp) {
+				console.log(resp);
+				console.log("Created deaprtments successful");
+				
+			},
+			error: function(resp) {
+				console.error(resp);
+			}
+		});
+}

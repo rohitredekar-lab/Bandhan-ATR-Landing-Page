@@ -1,0 +1,88 @@
+document.addEventListener('DOMContentLoaded', function() {
+  let contextPath = getContextPath();
+  
+  // Update 'src' attributes
+  let srcElements = document.querySelectorAll('[src]');
+  srcElements.forEach(function(element) {
+    setContextPath(element, contextPath, "src");
+  });
+  
+  // Update 'href' attributes
+  let hrefElements = document.querySelectorAll('[href]');
+  hrefElements.forEach(function(element) {
+	setContextPath(element, contextPath, "href");
+  });
+  
+  // Update 'actionElements' attributes
+  let actionElements = document.querySelectorAll('[action]');
+  actionElements.forEach(function(element) {
+	setContextPath(element, contextPath, "action");
+    
+  });
+  
+});
+
+// Function to get the context path
+function getContextPath() {
+  let pathName = window.location.pathname;
+  let index = pathName.indexOf("/", 1);
+  return pathName.substring(0, index);
+}
+
+function setContextPath(element, contextPath, attribute){
+	
+	let src = element.getAttribute(attribute);
+	//console.log("src => "+src);
+    if (src && !src.startsWith(contextPath)) {
+		if((src.endsWith("js") || src.endsWith("css") || src.endsWith("png") || src.endsWith("svg") || src.endsWith("jpeg") || src.endsWith("jpg") || src.endsWith("gif")) && !src.includes("custom")){
+			contextPath = contextPath + "/theme_3/dist/";
+		}else if(src.endsWith("html")){
+		}
+		else if(!(src.includes("#") || src.endsWith("void(0);"))){
+			element.setAttribute(attribute, contextPath + src);
+		}
+		
+    }else{
+		//console.log("element => "+element);
+		//debugger;
+		let elementType = typeof element;
+		if(elementType === String){
+			let portIndex = element.indexOf(':', 8); // Find the first colon (:) after the protocol (https:// or http://)
+			let urlAfterPort = fullURL.substring(portIndex + 5);
+			if (urlAfterPort && !urlAfterPort.startsWith(contextPath)) {
+				let previousUrl = element.substring(0, portIndex+5);
+				element = previousUrl + contextPath + urlAfterPort;
+			}
+		}
+	}
+}
+
+if(!(typeof $ === 'undefined')){
+	$(document).ready(function() {
+	  // Set up default settings for all AJAX requests
+	  $.ajaxSetup({
+		beforeSend: function(jqXHR, settings) {
+		  // Prefix the URL with the context path
+		  settings.url = getContextPath() + settings.url;
+		}
+	  });
+
+	  // Your other code here...
+	  $('body').on( 'init.dt', function ( e, ctx ) {
+			let hrefElements = document.querySelectorAll('[href]');
+			hrefElements.forEach(function(element) {
+				setContextPath(element, getContextPath(), "href");
+
+			});
+		} );
+	  $('body').on('draw.dt', function(e, ctx, id, data){
+		    let hrefElements = document.querySelectorAll('[href]');
+			hrefElements.forEach(function(element) {
+				setContextPath(element, getContextPath(), "href");
+			});	
+		});
+	});
+
+}else{
+	console.error("ERROR JQ2133 : Jquery not defined.");
+}

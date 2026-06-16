@@ -1,0 +1,10 @@
+/* start menu item css */
+
+#js-primary-nav{
+	background-color: #fff;
+}
+
+.nav-menu li a > [class*='fa-'], .nav-menu li a > .ni {
+    color: #1375be !important;
+}
+

@@ -1,0 +1,164 @@
+/*******************************************************************************
+ * Strictly Confidential Information. All rights reserved with Finarya Tech Private Limited.
+ *
+ * DO NOT ALTER OR REMOVE CONFIDENTIAL INFORMATION NOTICES OR THIS FILE HEADER.
+ *******************************************************************************/
+$(function() {
+	init();
+});
+
+function init() {
+	animatedToggleModal();
+	ethicalSiteMapMenu();
+}
+
+function animatedToggleModal() {
+	$(document).ready(function() {
+		var zindex = 10;
+
+		$("div.card").click(function(e) {
+			e.preventDefault();
+
+			var isShowing = false;
+
+			if ($(this).hasClass("d-card-show")) {
+				isShowing = true
+			}
+
+			if ($("div.dashboard-cards").hasClass("showing")) {
+				$("div.card.d-card-show").removeClass("d-card-show");
+
+				if (isShowing) {
+					$("div.dashboard-cards").removeClass("showing");
+				} else {
+					$(this).css({
+						zIndex: zindex
+					}).addClass("d-card-show");
+
+				}
+
+				zindex++;
+
+			} else {
+				$("div.dashboard-cards").addClass("showing");
+				$(this).css({
+					zIndex: zindex
+				}).addClass("d-card-show");
+
+				zindex++;
+			}
+
+		});
+	});
+}
+
+
+$(document).ready(function() {
+	$(".slide-toggle").click(function() {
+		$(".accordionBox").not(".left_box").hide();
+		$(".left_box").animate({
+			width: "toggle"
+		});
+	});
+
+	$(".slide-toggle2").click(function() {
+		$(".accordionBox").not(".left_box2").hide();
+		$(".left_box2").animate({
+			width: "toggle"
+		});
+	});
+
+
+	$(".slide-toggle3").click(function() {
+		$(".accordionBox").not(".left_box3").hide();
+		$(".left_box3").animate({
+			width: "toggle"
+		});
+	});
+
+
+
+	$(".slide-toggle4").click(function() {
+		$(".accordionBox").not(".left_box4").hide();
+		$(".left_box4").animate({
+			width: "toggle"
+		});
+	});
+
+
+	$(".slide-toggle5").click(function() {
+		$(".accordionBox").not(".left_box5").hide();
+		$(".left_box5").animate({
+			width: "toggle"
+		});
+	});
+
+
+	$(".slide-toggle6").click(function() {
+		$(".accordionBox").not(".left_box6").hide();
+		$(".left_box6").animate({
+			width: "toggle"
+		});
+	});
+
+
+	$(".slide-toggle7").click(function() {
+		$(".accordionBox").not(".left_box7").hide();
+		$(".left_box7").animate({
+			width: "toggle"
+		});
+	});
+
+
+	$(".slide-toggle8").click(function() {
+		$(".accordionBox").not(".left_box8").hide();
+		$(".left_box8").animate({
+			width: "toggle"
+		});
+	});
+
+
+	$(".slide-toggle9").click(function() {
+		$(".accordionBox").not(".left_box9").hide();
+		$(".left_box9").animate({
+			width: "toggle"
+		});
+	});
+
+
+	initApp.listFilter($('#Process_Documentation_list'), $('#Process_Documentation_list_filter'));
+	initApp.listFilter($('#Risk_Management_list'), $('#Risk_Management_list_filter'));
+	initApp.listFilter($('#Audit_list'), $('#Audit_list_filter'));
+	initApp.listFilter($('#RCA_and_Solution_list'), $('#RCA_and_Solution_list_filter'));
+	initApp.listFilter($('#Compliance_list'), $('#Compliance_list_filter'));
+	initApp.listFilter($('#Legal_Case_Management_list'), $('#Legal_Case_Management_list_filter'));
+	initApp.listFilter($('#Role_wise_Dashboard_list'), $('#Role_wise_Dashboard_filter'));
+	initApp.listFilter($('#Learning_Portal_list'), $('#Learning_Portal_list_filter'));
+	initApp.listFilter($('#Finance_list'), $('#Finance_list_filter'));
+
+
+	initApp.buildNavigation($('#Process_Documentation_list'));
+	initApp.buildNavigation($('#Risk_Management_list'));
+	initApp.buildNavigation($('#Audit_list'));
+	initApp.buildNavigation($('#RCA_and_Solution_list'));
+	initApp.buildNavigation($('#Compliance_list'));
+	initApp.buildNavigation($('#Legal_Case_Management_list'));
+	initApp.buildNavigation($('#Learning_Portal_list'));
+	initApp.buildNavigation($('#Role_wise_Dashboard_list'));
+	initApp.buildNavigation($('#Finance_list'));
+
+});
+
+
+function ethicalSiteMapMenu() {
+
+	$("#ethicalSideMapMenu").click(function() {
+		$(".csi-ethical-hide-div-0829").slideToggle();
+		$(".csi_img_audit_logo").toggleClass("csi-img-every-image-border-radius-1244");
+
+	});
+	
+/*	$("#csi-fullScreenEthicalDiv1219").click(function(){
+		$(".cs-audit-landing-bg").toggleClass("csi-toggle-fullScreen-Ethical-Container-1221");
+	});*/
+}
