@@ -1,0 +1,2925 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://10.6.0.4:8443/atr/showLandingPage -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>"Ethical" powered by Finarya</title>
+
+	<meta name="description" content="Finarya">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no, minimal-ui">
+	<!-- Call App Mode on ios devices -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<!-- Remove Tap Highlight on Windows Phone IE -->
+	<meta name="msapplication-tap-highlight" content="no">
+	<meta name="_csrf" content="0623e636-0dcc-4937-b535-6377a14b3aea">
+	<meta name="_csrf_header" content="X-CSRF-TOKEN">
+	<!-- Change theme here by updating value of th:href -->
+	<!-- <base href="/theme_3/dist/" th:href="@{/theme_3/dist/}"> -->
+	<!--<base href="/atr/theme_3/dist/">-->
+	<base href=".">
+	<!-- Font Awesome 6 Free - required for fal/fas icon classes -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+		crossorigin="anonymous">
+	<link rel="stylesheet" media="screen, print" href="./_Ethical_ powered by Finarya_files/finarya_style.css">
+	<!-- base css -->
+	<link rel="stylesheet" media="screen, print" href="./_Ethical_ powered by Finarya_files/vendors.bundle.css">
+	<link rel="stylesheet" media="screen, print" href="./_Ethical_ powered by Finarya_files/app.bundle.css">
+	<link rel="stylesheet" href="./_Ethical_ powered by Finarya_files/resposive_media_quary.css">
+	<!-- Place favicon.ico in the root directory -->
+	<link rel="apple-touch-icon" sizes="180x180"
+		href="https://10.6.0.4:8443/atr/theme_3/dist/img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32"
+		href="https://10.6.0.4:8443/atr/custom/finarya/images/logo_finarya_96.ico">
+	<link rel="mask-icon" href="https://10.6.0.4:8443/atr/theme_3/dist/img/favicon/safari-pinned-tab.svg"
+		color="#5bbad5">
+	<link rel="stylesheet" href="./_Ethical_ powered by Finarya_files/style_1.css">
+
+	<link rel="stylesheet" media="screen, print" href="./_Ethical_ powered by Finarya_files/bootstrap-datepicker.css">
+	<link rel="stylesheet" media="screen, print" href="./_Ethical_ powered by Finarya_files/sweetalert2.bundle.css">
+	<link rel="stylesheet" media="screen, print" href="./_Ethical_ powered by Finarya_files/select2.bundle.css">
+	<link rel="stylesheet" media="screen, print" href="./_Ethical_ powered by Finarya_files/smartwizard.css">
+	<link rel="stylesheet" media="screen, print" href="./_Ethical_ powered by Finarya_files/datatables.bundle.css">
+	<link rel="stylesheet" media="screen, print" href="./_Ethical_ powered by Finarya_files/menu.css">
+
+	<!--<link rel="stylesheet" media="screen, print" href="css/landing/landing_style.css">-->
+
+	<link rel="stylesheet" media="screen, print" href="./_Ethical_ powered by Finarya_files/landing_style_axis.css">
+
+
+	<!--<th:block th:switch="${@environment.getProperty('finarya.tenant.name')}">
+	<div th:case="'finarya'">
+		<link rel="stylesheet" media="screen, print" href="css/landing/landing_style.css">
+	</div>
+	<div th:case="'axis'">
+		<link rel="stylesheet" media="screen, print" href="css/landing/landing_style_axis.css">
+	</div>
+	<div th:case="*">
+		<link rel="stylesheet" media="screen, print" href="css/landing/landing_style.css">
+	</div>
+</th:block>	
+-->
+	<link rel="stylesheet" href="./_Ethical_ powered by Finarya_files/custom_style.css">
+
+	<!-- start excel plugin css -->
+	<link rel="stylesheet" href="./_Ethical_ powered by Finarya_files/xspreadsheet.css">
+	<!-- <link rel="stylesheet" href="css/excel/xspreadsheet.css.map"> -->
+	<!-- end excel plugin css -->
+
+	<!-- start animation css -->
+	<link rel="stylesheet" media="screen, print" href="./_Ethical_ powered by Finarya_files/animate.min.css">
+	<!-- end animation css -->
+	<link rel="stylesheet" href="./_Ethical_ powered by Finarya_files/custum_rm_style.css">
+
+	<!--<link rel="stylesheet" href="/css/smart_finarya.css" />-->
+
+	<link rel="stylesheet" media="screen, print" href="./_Ethical_ powered by Finarya_files/smart_axis.css">
+
+	<!--<th:block th:switch="${@environment.getProperty('finarya.tenant.name')}">
+	<div th:case="'finarya'">
+		<link rel="stylesheet" href="/css/smart_finarya.css" />
+	</div>
+	<div th:case="'axis'">
+		<link rel="stylesheet" href="/css/smart_axis.css" />
+	</div>
+	<div th:case="*">
+		<link rel="stylesheet" href="/css/smart_finarya.css" />
+	</div>
+</th:block>
+-->
+	<!-- dateRangePicker RM Start -->
+	<link rel="stylesheet" href="./_Ethical_ powered by Finarya_files/daterangepicker.css">
+	<!-- dateRangePicker RM End -->
+
+	<style>
+		#preloader {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: #2b2a2a47;
+			/* change if the mask should have another color then white */
+			z-index: 999999;
+			/* makes sure it stays on top */
+		}
+
+		#status {
+			width: 220px;
+			height: 220px;
+			position: absolute;
+			left: 50%;
+			/* centers the loading animation horizontally one the screen */
+			top: 50%;
+			/* centers the loading animation vertically one the screen */
+			background-image: url(img/finarya_img/make_in_india_lion_250.gif);
+			/* path to your loading animation */
+			background-repeat: no-repeat;
+			background-position: center;
+			margin: -100px 0 0 -100px;
+			/* is width and height divided by two */
+		}
+
+		.cs-audit-landing-bg {
+			background-image: url('landing_page_bg.jpg') !important;
+		}
+	</style>
+</head>
+
+<body class="mod-bg-1 nav-function-top header-function-fixed nav-function-fixed desktop chrome webkit pace-done"
+	style="overflow: visible;">
+	<div class="pace  pace-inactive">
+		<div class="pace-progress" data-progress-text="100%" data-progress="99"
+			style="transform: translate3d(100%, 0px, 0px);">
+			<div class="pace-progress-inner"></div>
+		</div>
+		<div class="pace-activity"></div>
+	</div>
+	<div id="preloader" style="display: none;">
+		<div id="status" style="display: none;">&nbsp;</div>
+	</div>
+	<script>
+		/**
+		 *	This script should be placed right after the body tag for fast execution 
+		 *	Note: the script is written in pure javascript and does not depend on thirdparty library
+		 **/
+		'use strict';
+
+		var classHolder = document.getElementsByTagName("BODY")[0],
+			/** 
+			 * Load from localstorage
+			 **/
+			themeSettings = (localStorage.getItem('themeSettings')) ? JSON
+				.parse(localStorage.getItem('themeSettings')) : {}, themeURL = themeSettings.themeURL
+					|| '', themeOptions = themeSettings.themeOptions || '';
+		/** 
+		 * Load theme options
+		 **/
+		if (themeSettings.themeOptions) {
+			classHolder.className = themeSettings.themeOptions;
+			console.log("%câœ” Theme settings loaded", "color: #148f32");
+		} else {
+			console
+				.log("Heads up! Theme settings is empty or does not exist, loading default settings...");
+		}
+		if (themeSettings.themeURL && !document.getElementById('mytheme')) {
+			var cssfile = document.createElement('link');
+			cssfile.id = 'mytheme';
+			cssfile.rel = 'stylesheet';
+			cssfile.href = themeURL;
+			document.getElementsByTagName('head')[0].appendChild(cssfile);
+		}
+		/** 
+		 * Save to localstorage 
+		 **/
+		var saveSettings = function () {
+			themeSettings.themeOptions = String(classHolder.className).split(
+				/[^\w-]+/).filter(function (item) {
+					return /^(nav|header|mod|display)-/i.test(item);
+				}).join(' ');
+			if (document.getElementById('mytheme')) {
+				themeSettings.themeURL = document.getElementById('mytheme')
+					.getAttribute("href");
+			}
+			;
+			localStorage
+				.setItem('themeSettings', JSON.stringify(themeSettings));
+		}
+		/** 
+		 * Reset settings
+		 **/
+		var resetSettings = function () {
+			localStorage.setItem("themeSettings", "");
+		}
+	</script>
+	<!-- BEGIN Page Wrapper -->
+	<div class="page-wrapper">
+		<div class="page-inner">
+
+			<!-- Left panel : Navigation area -->
+			<!-- Note: This width of the aside area can be adjusted through LESS variables -->
+			<div>
+				<!-- BEGIN Left Aside -->
+				<!-- 	<th:block th:switch="${@environment.getProperty('finarya.tenant.name')}"> -->
+				<!-- 		<div th:case="'axis'"> -->
+				<!-- 			<aside th:fragment="left_menu" th:replace="common_3/menu_axis :: left_menu"></aside>			 -->
+				<!-- 		</div> -->
+				<!-- 		<div th:case="'finarya'"> -->
+				<!-- 			<aside th:fragment="left_menu" th:replace="common_3/menu :: left_menu"></aside> -->
+				<!-- 		</div> -->
+				<!-- 		<div th:case="*"> -->
+				<!-- 			<aside th:fragment="left_menu" th:replace="common_3/menu :: left_menu"></aside> -->
+				<!-- 		</div> -->
+				<!-- 	</th:block> -->
+				<aside class="page-sidebar csi_page_sidebar" id="left-panel">
+					<div class="page-logo">
+						<a href="https://10.6.0.4:8443/atr/showLandingPage" class="csi_resposive_logo_1707"> <img
+								src="./_Ethical_ powered by Finarya_files/logo_finarya_header_1.svg"
+								class="csi-rm-logo-finarya pk" alt="FINARYA" aria-roledescription="logo"
+								style="width: 500px !important; height: auto !important; max-width: 500px !important;">
+						</a>
+					</div>
+					<!-- BEGIN PRIMARY NAVIGATION -->
+					<nav id="js-primary-nav" class="primary-nav js-list-filter" role="navigation">
+						<div class="nav-filter">
+							<div class="position-relative">
+								<input type="text" id="nav_filter_input" placeholder="Filter menu" class="form-control"
+									tabindex="0"> <a href="https://10.6.0.4:8443/atr/theme_3/dist/#"
+									onclick="return false;" class="btn-primary btn-search-close js-waves-off"
+									data-action="toggle" data-class="list-filter-active" data-target=".page-sidebar"> <i
+										class="fal fa-chevron-up"></i>
+								</a>
+							</div>
+						</div>
+						<div class="info-card p-0">
+							<!-- finarya logo div start -->
+
+							<!--  <div class="finarya-logo-div">
+					<a href="/showLandingPage"> <img
+						src="svg/logo_finarya_header.svg"
+						class="csi-rm-logo-finarya-main-1128" alt="">
+					</a>
+				</div>  -->
+
+							<!-- finarya logo div end -->
+
+							<!-- axis logo div start -->
+
+							<div class="Axis-logo-div fn-bg-color-logo-30303y">
+								<a href="https://10.6.0.4:8443/atr/showLandingPage"> <img
+										src="./_Ethical_ powered by Finarya_files/finarya-curvebg_1.svg"
+										style="width: 500px !important; height: auto !important; max-width: 500px !important;">
+									<img src="./_Ethical_ powered by Finarya_files/logo-axis-white.svg"
+										style="width: 500px !important; height: auto !important; max-width: 500px !important;">
+								</a>
+							</div>
+
+							<!-- axis logo div end -->
+
+							<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" onclick="return false;"
+								class="pull-trigger-btn" data-action="toggle" data-class="list-filter-active"
+								data-target=".page-sidebar" data-focus="nav_filter_input"> <i
+									class="fas fa-angle-down"></i>
+							</a>
+						</div>
+
+
+						<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" id="js-nav-menu-wrapper-left-btn"
+							class="d-flex align-items-center justify-content-center width-4 btn mt-1 mb-1 mr-2 ml-1 p-0 fs-xxl text-primary waves-effect waves-themed"><i
+								class=""></i></a>
+						<div id="js-nav-menu-wrapper"
+							class="nav-menu-wrapper d-flex flex-grow-1 width-0 overflow-hidden">
+							<ul id="js-nav-menu"
+								class="nav-menu finarya_rm_landing_page_ul_sidebar js-list-filter js-nav-built"
+								style="margin-left: 0px;">
+
+
+								<!-- ADMIN -->
+								<!--<li
+					th:if="${#authorization.expression('hasAnyRole(''showCreateApplicationRolePage'',''showListApplicationRolesPage'',
+					''showCreateDepartmentPage'',''showListDepartmentsPage'',''showCreateUserPage2'',''showListUserPage'',''showListOfLoginUsers'',
+					''showCreateProductPage'',''showListProductsPage'',''showCreateApplicationPage'',''showUploadApplicationPage'',
+					''showCreateBranchPage'',''showListBranchPage'',''showUploadBranchPage'', ''showCreateMasterGenericDropDownPage'',''showListGenericDropDownPage'',
+					''showUploadChecklistPage'',''showClearDatabasePage'',''showListLinkedEntityPage'',''showCreateTeamPage'',''showListTeamPage'',''showViewBulkUploadActionables'')')}">
+					<a title="Admin Documentation" data-filter-tags="application intel">
+						<img src="img/LandingPageImg/svg/administrator.svg" class=" mr-1 csi-rm-link-icon" alt=""> <span
+							class="nav-link-text csi-rm-link-text" data-i18n="nav.application_intel">Admin</span>
+					</a>
+
+					<ul>-->
+
+								<!-- DEPARTMENT WORKBENCH -->
+								<!--<li
+							th:if="${#authorization.expression('hasAnyRole(''showCreateDepartmentPage'',''showListDepartmentsPage'')')}">
+							<a href="javascript:void(0);" title="Admin Workbench" data-filter-tags="Process Workbench">
+								<span class="nav-link-text" data-i18n="nav.Process_Workbench">Department
+									Workbench</span>
+							</a>
+							<ul>
+								<li th:if="${#authorization.expression('hasRole(''showCreateDepartmentPage'')')}"><a
+										href="/showCreateDepartmentPage" title="Create Department"
+										data-filter-tags="Create Department"> <span class="nav-link-text"
+											data-i18n="nav.Create_Department">Create
+											Department</span>
+									</a></li>
+								<li th:if="${#authorization.expression('hasRole(''showListDepartmentsPage'')')}"><a
+										href="/showListDepartmentsPage" title="List Department"
+										data-filter-tags="List Process"> <span class="nav-link-text"
+											data-i18n="nav.List_Process">List
+											Department</span>
+									</a>
+								</li>
+							</ul>
+						</li>-->
+
+								<!-- Application Roles -->
+								<!--<li th:if="${#authorization.expression('hasAnyRole(''showCreateApplicationRolePage'',''showListApplicationRolesPage'')')}">
+							<a href="javascript:void(0);" title="Application Roles"
+								data-filter-tags="Application Roles"> <span class="nav-link-text"
+									data-i18n="nav.Application Roles">Application Roles</span>
+							</a>
+							<ul>
+								<li th:if="${#authorization.expression('hasRole(''showCreateApplicationRolePage'')')}">
+									<a href="/showCreateApplicationRolePage" title="Create Application Roles"
+										data-filter-tags="Create Application Roles"> <span class="nav-link-text"
+											data-i18n="nav.Create_Application_Roles">Create
+											Application Roles</span>
+									</a>
+								</li>
+								<li th:if="${#authorization.expression('hasRole(''showListApplicationRolesPage'')')}">
+									<a href="/showListApplicationRolesPage" title="List Application Roles"
+										data-filter-tags="List Team">
+										<span class="nav-link-text" data-i18n="nav.list_Application_Roles">List
+											Application Roles</span>
+									</a>
+								</li>
+							</ul>
+						</li>-->
+
+								<!-- USER MANAGEMENT -->
+								<!--<li
+							th:if="${#authorization.expression('hasAnyRole(''showCreateUserPage2'',''showListUserPage'',''showListOfLoginUsers'')')}">
+							<a href="javascript:void(0);" title="User Management" data-filter-tags="Excel"> <span
+									class="nav-link-text" data-i18n="nav.Excel">User Management</span>
+							</a>
+							<ul>
+								<li th:if="${#authorization.expression('hasRole(''showCreateUserPage2'')')}"><a
+										title="Create Users" href="/showCreateUserPage2" data-filter-tags="User Module">
+										<span class="nav-link-text" data-i18n="nav.list">Create User </span>
+									</a></li>
+								<li th:if="${#authorization.expression('hasRole(''showListUserPage'')')}"><a
+										title="LIST users screen" href="/showListUserPage" data-filter-tags="layout">
+										<span class="nav-link-text" data-i18n="nav.layout">List User</span>
+									</a></li>
+								<li th:if="${#authorization.expression('hasAnyRole(''showListOfLoginUsers'')')}">
+									<a href="/showListOfLoginUsers" title="List Of LoggedIn Users"
+										data-filter-tags="List Of LoggedIn Users"> <span class="nav-link-text"
+											data-i18n="nav.List_Of_LoggedIn_Users">List
+											Of LoggedIn Users</span>
+									</a>
+								</li>
+
+
+							</ul>
+						</li>-->
+
+								<!-- GENERIC DATA MASTER -->
+								<!--<li
+							th:if="${#authorization.expression('hasAnyRole(''showCreateMasterGenericDropDownPage'',''showListGenericDropDownPage'')')}">
+							<a href="javascript:void(0);" title="Generic Data Master"
+								data-filter-tags="Master Application"> <span class="nav-link-text"
+									data-i18n="nav.Product_Flow_Diagram">Generic
+									Data Master</span>
+							</a>
+							<ul>
+								<li
+									th:if="${#authorization.expression('hasRole(''showCreateMasterGenericDropDownPage'')')}">
+									<a title="Create Generic Data" href="/showCreateMasterGenericDropDownPage"
+										data-filter-tags="Create Generic Data"> <span class="nav-link-text"
+											data-i18n="nav.create">Create
+											Generic Data </span>
+									</a>
+								</li>
+								<li th:if="${#authorization.expression('hasRole(''showListGenericDropDownPage'')')}"><a
+										title="List Generic Data" href="/showListGenericDropDownPage"
+										data-filter-tags="List Generic Data"> <span class="nav-link-text"
+											data-i18n="nav.list">List Generic
+											Data </span>
+									</a></li>
+							</ul>
+						</li>-->
+
+								<!-- TEAM -->
+								<!--<li
+							th:if="${#authorization.expression('hasAnyRole(''showCreateTeamPage'',''showListTeamPage'')')}">
+							<a href="javascript:void(0);" title="Team" data-filter-tags="Team">
+								<span class="nav-link-text" data-i18n="nav.Team">Team</span>
+							</a>
+							<ul>
+								<li th:if="${#authorization.expression('hasRole(''showCreateTeamPage'')')}">
+									<a href="/showCreateTeamPage" title="Create Team" data-filter-tags="Create Team">
+										<span class="nav-link-text" data-i18n="nav.Create_Team">Create Team</span>
+									</a>
+								</li>
+								<li th:if="${#authorization.expression('hasRole(''showListTeamPage'')')}">
+									<a href="/showListTeamPage" title="List Team" data-filter-tags="List Team">
+										<span class="nav-link-text" data-i18n="nav.list_Team">List Team</span>
+									</a>
+								</li>
+							</ul>
+						</li>-->
+
+
+								<!-- Upload Actionable  -->
+								<!--<li th:if="${#authorization.expression('hasRole(''showViewBulkUploadActionables'')')}">
+							<a href="/showViewBulkUploadActionables" title="Upload Actionable"
+								data-filter-tags="Master Application"> <span class="nav-link-text"
+									data-i18n="nav.Product_Flow_Diagram">Upload Actionable</span>
+							</a>
+						</li>
+-->
+								<!--admin Menu Closed-->
+								<!--</ul>
+				</li>-->
+
+								<!-- Admin Start -->
+								<li>
+									<a title="Admin" data-filter-tags="Actionable" class=" waves-effect waves-themed">
+										<img src="./_Ethical_ powered by Finarya_files/administrator.svg"
+											class=" mr-1 csi-rm-link-icon" alt="">
+										<span class="nav-link-text csi-rm-link-text"
+											data-i18n="nav.Actionable">Admin</span>
+										<b class="collapse-sign"><em class="fas fa-angle-down"></em></b></a>
+
+									<ul>
+										<!-- DEPARTMENT WORKBENCH -->
+										<li>
+											<a href="javascript:void(0);" title="Admin Workbench"
+												data-filter-tags="Process Workbench" class=" waves-effect waves-themed">
+												<span class="nav-link-text" data-i18n="nav.Process_Workbench">Department
+													Workbench</span>
+												<b class="collapse-sign"><em class="fas fa-angle-down"></em></b></a>
+											<ul>
+												<li><a href="https://10.6.0.4:8443/atr/showCreateDepartmentPage"
+														title="Create Department" data-filter-tags="Create Department"
+														class=" waves-effect waves-themed"> <span class="nav-link-text"
+															data-i18n="nav.Create_Department">Create
+															Department</span>
+													</a></li>
+												<li><a href="https://10.6.0.4:8443/atr/showListDepartmentsPage"
+														title="List Department" data-filter-tags="List Process"
+														class=" waves-effect waves-themed"> <span class="nav-link-text"
+															data-i18n="nav.List_Process">List
+															Department</span>
+													</a>
+												</li>
+											</ul>
+										</li>
+										<!-- Application Roles -->
+										<li>
+											<a href="javascript:void(0);" title="Application Roles"
+												data-filter-tags="Application Roles" class=" waves-effect waves-themed">
+												<span class="nav-link-text"
+													data-i18n="nav.Application Roles">Application Roles</span>
+												<b class="collapse-sign"><em class="fas fa-angle-down"></em></b></a>
+											<ul>
+												<li>
+													<a href="https://10.6.0.4:8443/atr/showCreateApplicationRolePage"
+														title="Create Application Roles"
+														data-filter-tags="Create Application Roles"
+														class=" waves-effect waves-themed"> <span class="nav-link-text"
+															data-i18n="nav.Create_Application_Roles">Create
+															Application Roles</span>
+													</a>
+												</li>
+												<li>
+													<a href="https://10.6.0.4:8443/atr/showListApplicationRolesPage"
+														title="List Application Roles" data-filter-tags="List Team"
+														class=" waves-effect waves-themed">
+														<span class="nav-link-text"
+															data-i18n="nav.list_Application_Roles">List
+															Application Roles</span>
+													</a>
+												</li>
+											</ul>
+										</li>
+
+										<!-- USER MANAGEMENT -->
+										<li>
+											<a href="javascript:void(0);" title="User Management"
+												data-filter-tags="Excel" class=" waves-effect waves-themed"> <span
+													class="nav-link-text" data-i18n="nav.Excel">User Management</span>
+												<b class="collapse-sign"><em class="fas fa-angle-down"></em></b></a>
+											<ul>
+												<li><a title="Create Users"
+														href="https://10.6.0.4:8443/atr/showCreateUserPage2"
+														data-filter-tags="User Module"
+														class=" waves-effect waves-themed">
+														<span class="nav-link-text" data-i18n="nav.list">Create User
+														</span>
+													</a></li>
+												<li><a title="LIST users screen"
+														href="https://10.6.0.4:8443/atr/showListUserPage"
+														data-filter-tags="layout" class=" waves-effect waves-themed">
+														<span class="nav-link-text" data-i18n="nav.layout">List
+															User</span>
+													</a></li>
+												<li>
+													<a href="https://10.6.0.4:8443/atr/showListOfLoginUsers"
+														title="List Of LoggedIn Users"
+														data-filter-tags="List Of LoggedIn Users"
+														class=" waves-effect waves-themed"> <span class="nav-link-text"
+															data-i18n="nav.List_Of_LoggedIn_Users">List
+															Of LoggedIn Users</span>
+													</a>
+												</li>
+
+
+											</ul>
+										</li>
+										<!-- GENERIC DATA MASTER -->
+										<li>
+											<a href="javascript:void(0);" title="Generic Data Master"
+												data-filter-tags="Master Application"
+												class=" waves-effect waves-themed"> <span class="nav-link-text"
+													data-i18n="nav.Product_Flow_Diagram">Generic
+													Data Master</span>
+												<b class="collapse-sign"><em class="fas fa-angle-down"></em></b></a>
+											<ul>
+												<li>
+													<a title="Create Generic Data"
+														href="https://10.6.0.4:8443/atr/showCreateMasterGenericDropDownPage"
+														data-filter-tags="Create Generic Data"
+														class=" waves-effect waves-themed"> <span class="nav-link-text"
+															data-i18n="nav.create">Create
+															Generic Data </span>
+													</a>
+												</li>
+												<li><a title="List Generic Data"
+														href="https://10.6.0.4:8443/atr/showListGenericDropDownPage"
+														data-filter-tags="List Generic Data"
+														class=" waves-effect waves-themed"> <span class="nav-link-text"
+															data-i18n="nav.list">List Generic
+															Data </span>
+													</a></li>
+											</ul>
+										</li>
+
+									</ul>
+								</li>
+								<!-- Admin Close -->
+								<!-- Actionable -->
+								<li>
+									<a title="ATR Management Module" data-filter-tags="Actionable"
+										class=" waves-effect waves-themed"> <img
+											src="./_Ethical_ powered by Finarya_files/administrator.svg"
+											class=" mr-1 csi-rm-link-icon" alt="">
+										<span class="nav-link-text csi-rm-link-text" data-i18n="nav.Actionable">ATR
+											Management Module</span>
+										<b class="collapse-sign"><em class="fas fa-angle-down"></em></b></a>
+
+									<ul>
+
+										<!-- Actionable -->
+										<li>
+											<a href="javascript:void(0);" title="Actionable"
+												data-filter-tags="Actionable" class=" waves-effect waves-themed"> <span
+													class="nav-link-text" data-i18n="nav.Actionable">Actionable </span>
+												<b class="collapse-sign"><em class="fas fa-angle-down"></em></b></a>
+											<ul>
+												<li><a href="https://10.6.0.4:8443/atr/showCreateActionablePage"
+														title="Create Actionable" data-filter-tags="Create Actionable"
+														class=" waves-effect waves-themed"> <span class="nav-link-text"
+															data-i18n="nav.Create_Actionable">Create
+															Actionable</span>
+													</a></li>
+												<li><a href="https://10.6.0.4:8443/atr/showListOfMyActionablePage"
+														title="List my Actionables"
+														data-filter-tags="List my Actionables"
+														class=" waves-effect waves-themed"> <span class="nav-link-text"
+															data-i18n="nav.List_My_Actionables">List
+															My Actionables</span>
+													</a></li>
+												<li><a href="https://10.6.0.4:8443/atr/showListOfAllActionablePage"
+														title="List All Actionables"
+														data-filter-tags="List All Actionables"
+														class=" waves-effect waves-themed"> <span class="nav-link-text"
+															data-i18n="nav.List_All_Actionables">List
+															All Actionables</span>
+													</a></li>
+
+
+												<li>
+													<a href="https://10.6.0.4:8443/atr/showListOfActionableForResponsePage"
+														title="List Actionables pending for response review"
+														data-filter-tags="List Actionables pending for response review"
+														class=" waves-effect waves-themed">
+														<span class="nav-link-text"
+															data-i18n="nav.List_Actionables_pending_for_response_review">List
+															Actionables pending for response review</span>
+													</a>
+												</li>
+
+												<li>
+													<a href="https://10.6.0.4:8443/atr/showListOfAllActionablesForDeptHead"
+														title="List Actionables pending for response review"
+														data-filter-tags="List Actionables pending for response review"
+														class=" waves-effect waves-themed">
+														<span class="nav-link-text"
+															data-i18n="nav.List_Actionables_for_department_head">List
+															All Actionables for Department Head</span>
+													</a>
+												</li>
+
+												<li>
+													<a href="https://10.6.0.4:8443/atr/showListOfActionablePageForApproval"
+														title="List Actionables sent for timeline extension"
+														data-filter-tags="List Actionables sent for timeline extension"
+														class=" waves-effect waves-themed">
+														<span class="nav-link-text"
+															data-i18n="nav.List_Actionables_sent_for_timeline_extension">List
+															of Pending Actionables for approval</span>
+													</a>
+												</li>
+											</ul>
+										</li>
+
+
+
+
+										<!-- Action Requests -->
+										<li>
+											<a href="javascript:void(0);" title="Action Requests"
+												data-filter-tags="Action Requests" class=" waves-effect waves-themed">
+												<span class="nav-link-text" data-i18n="nav.Action_Requests">Action
+													Requests</span>
+												<b class="collapse-sign"><em class="fas fa-angle-down"></em></b></a>
+											<ul>
+												<li>
+													<a href="https://10.6.0.4:8443/atr/showListOfAssignedActionRequestPage"
+														title="List Assigned Action Requests"
+														data-filter-tags="List Assigned Action Requests"
+														class=" waves-effect waves-themed"> <span class="nav-link-text"
+															data-i18n="nav.List_Assigned_Action_Requests">List
+															assigned Action Requests</span>
+													</a>
+												</li>
+
+												<!--								<li-->
+												<!--									th:if="${#authorization.expression('hasRole(''showListOfActionRequestSentForTimelineExtensionApproval'')')}">-->
+												<!--									<a href="/showListOfAssignedActionRequestPage" title="List Assigned Action Requests"-->
+												<!--										data-filter-tags="List Assigned Action Requests"> <span class="nav-link-text"-->
+												<!--											data-i18n="nav.List_Assigned_Action_Requests">List-->
+												<!--											Action requests sent for Timline extensions</span>-->
+												<!--									</a>-->
+												<!--								</li>-->
+												<!--								<li-->
+												<!--									th:if="${#authorization.expression('hasRole(''showListOfActionableForTimelineExtensionPage'')')}">-->
+												<!--									<a href="/showListOfActionableForTimelineExtensionPage"-->
+												<!--										title="List Actionables sent for timeline extension"-->
+												<!--										data-filter-tags="List Actionables sent for timeline extension">-->
+												<!--										<span class="nav-link-text"-->
+												<!--											data-i18n="nav.List_Actionables_sent_for_timeline_extension">List-->
+												<!--											Actionables sent for timeline extension</span>-->
+												<!--									</a>-->
+												<!--								</li>-->
+											</ul>
+										</li>
+
+										<!-- Reports -->
+										<li><a href="javascript:void(0);" title="Reports" data-filter-tags="Reports"
+												class=" waves-effect waves-themed"> <span class="nav-link-text"
+													data-i18n="nav.Reports">Reports</span>
+												<b class="collapse-sign"><em class="fas fa-angle-down"></em></b></a>
+											<ul>
+												<!--<li><a href="/showCreateApplicationRolePage" title="Create Reports"
+										data-filter-tags="Actionable note">
+										<span class="nav-link-text" data-i18n="nav.Actionable_note">Actionable
+											note</span>
+									</a></li>-->
+												<!--<li th:if="${#authorization.expression('hasRole(''showATRReporPage'')')}"><a href="/showATRReporPage" title="ATR Report"
+										data-filter-tags="ATR Report">
+										<span class="nav-link-text" data-i18n="nav.ATR_Report">ATR Report</span>
+									</a>
+								</li>-->
+												<!--<li th:if="${#authorization.expression('hasRole(''showATRReportTotalDumpPage'')')}"><a href="/showATRReportTotalDumpPage" title="ATR Total Dump"
+									   data-filter-tags="ATR Total Dump">
+									<span class="nav-link-text" data-i18n="nav.ATR_Report_Total_Dump">ATR Total Dump</span>
+								 </a>
+								</li>-->
+												<li><a href="https://10.6.0.4:8443/atr/showActionableReporPage"
+														title="Actionable Report" data-filter-tags="Actionable Report"
+														class=" waves-effect waves-themed">
+														<span class="nav-link-text"
+															data-i18n="nav.Actionable_Report">Actionable Report</span>
+													</a>
+												</li>
+											</ul>
+										</li>
+
+										<!-- Bulk Upload Actionable -->
+										<li><a href="javascript:void(0);" title="Upload Actionable"
+												data-filter-tags="Upload Actionable" class=" waves-effect waves-themed">
+												<span class="nav-link-text" data-i18n="nav.Upload_Actionable">Upload
+													Actionable</span>
+												<b class="collapse-sign"><em class="fas fa-angle-down"></em></b></a>
+											<ul>
+												<li><a href="https://10.6.0.4:8443/atr/showViewBulkUploadActionables"
+														title="Bulk Upload Actionable"
+														data-filter-tags="Upload Actionable"
+														class=" waves-effect waves-themed">
+														<span class="nav-link-text"
+															data-i18n="nav.Bulk_Upload_Actionable">Bulk Upload
+															Actionable</span>
+													</a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+
+
+							</ul>
+						</div><a href="https://10.6.0.4:8443/atr/theme_3/dist/#" id="js-nav-menu-wrapper-right-btn"
+							class="d-flex align-items-center justify-content-center width-4 btn mt-1 mb-1 mr-1 ml-2 p-0 fs-xxl text-primary waves-effect waves-themed"><i
+								class=""></i></a>
+						<div class="filter-message js-filter-message bg-success-600"></div>
+					</nav>
+					<!-- END PRIMARY NAVIGATION -->
+					<!-- NAV FOOTER -->
+					<div class="nav-footer shadow-top">
+						<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" onclick="return false;" data-action="toggle"
+							data-class="nav-function-minify" class="hidden-md-down"> <i class="ni ni-chevron-right"></i>
+							<i class="ni ni-chevron-right"></i>
+						</a>
+						<ul class="list-table m-auto nav-footer-buttons">
+							<li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title=""
+									data-original-title="Chat logs"> <i class="fal fa-comments"></i>
+								</a></li>
+							<li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title=""
+									data-original-title="Support Chat"> <i class="fal fa-life-ring"></i>
+								</a></li>
+							<li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title=""
+									data-original-title="Make a call"> <i class="fal fa-phone"></i>
+								</a></li>
+						</ul>
+					</div>
+					<!-- END NAV FOOTER -->
+				</aside>
+
+			</div>
+			<!-- END NAVIGATION -->
+
+			<div id="header" class="page-content-wrapper">
+				<!-- HEADER -->
+				<header class="page-header csi-rm-page-header" role="banner">
+					<!-- we need this logo when user switches to nav-function-top -->
+					<div class="page-logo">
+						<!-- <a href="#" class="page-logo-link press-scale-down d-flex align-items-center position-relative"
+                            data-toggle="modal" data-target="#modal-shortcut">
+                            <img src="img/logo.png" alt="SmartAdmFin WebApp" aria-roledescription="logo">
+                            <span class="page-logo-text mr-1">SmartAdmin WebApp</span>
+                            <span
+                                class="position-absolute text-white opacity-50 small pos-top pos-right mr-2 mt-n2"></span>
+                            <i class="fas fa-angle-down d-inline-block ml-1 fs-lg color-primary-300"></i>
+                        </a> -->
+
+
+						<div>
+							<div class="Axis-logo-div">
+								<a href="https://10.6.0.4:8443/atr/showLandingPage">
+									<img src="./_Ethical_ powered by Finarya_files/finarya-curvebg_1.svg"
+										class="csi-rm-logo-finarya" alt=""
+										style="width: 220px !important; height: auto !important;">
+									<img src="./_Ethical_ powered by Finarya_files/logo-bandhan-blue.svg"
+										class="csi-rm-bandhan-logo-white-0343" alt=""
+										style="width: 220px !important; height: auto !important;">
+								</a>
+							</div>
+						</div>
+
+
+
+						<!-- finarya logo div start -->
+
+						<!--  <div class="finarya-logo-div">
+			<a href="/showLandingPage"> <img
+				src="svg/logo_finarya_header.svg"
+				class="csi-rm-logo-finarya-main-1128" alt="">
+			</a>
+		</div>  -->
+
+						<!-- finarya logo div end -->
+
+						<!-- axis logo div start -->
+
+						<!--<div class="Axis-logo-div">
+			<a href="/showLandingPage"> 
+			<img
+				src="svg/finarya-curvebg.svg"
+				class="csi-rm-logo-finarya" alt="">
+				<img
+				src="svg/logo-axis-white.svg"
+				class="csi-rm-axis-logo-white-0343" alt="">
+			</a>
+		</div> -->
+
+						<!-- axis logo div end -->
+
+					</div>
+					<!-- DOC: nav menu layout change shortcut -->
+					<div class="hidden-md-down dropdown-icon-menu position-relative">
+						<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" class="header-btn btn js-waves-off"
+							data-action="toggle" data-class="nav-function-hidden" title="Hide Navigation"> <i
+								class="ni ni-menu"></i>
+						</a>
+						<ul>
+							<li><a href="https://10.6.0.4:8443/atr/theme_3/dist/#" class="btn js-waves-off"
+									data-action="toggle" data-class="nav-function-minify" title="Minify Navigation"> <i
+										class="ni ni-minify-nav"></i>
+								</a></li>
+							<li><a href="https://10.6.0.4:8443/atr/theme_3/dist/#" class="btn js-waves-off"
+									data-action="toggle" data-class="nav-function-fixed" title="Lock Navigation"> <i
+										class="ni ni-lock-nav"></i>
+								</a></li>
+						</ul>
+					</div>
+					<!-- DOC: mobile button appears during mobile width -->
+					<div class="hidden-lg-up">
+						<a href="https://10.6.0.4:8443/atr/theme_3/dist/#"
+							class="header-btn btn press-scale-down waves-effect waves-themed" data-action="toggle"
+							data-class="mobile-nav-on">
+							<i class="ni ni-menu"></i>
+						</a>
+					</div>
+					<!-- 		<div class="search"> -->
+					<!-- 			<form class="app-forms csi-flex-box-jc-end-1059 hidden-xs-down" role="search" -->
+					<!-- 				action="page_search.html" autocomplete="off"> -->
+					<!-- 					<div class="input-group csi-bg-color-search-0502 shadow-inset-2"> -->
+					<!-- 	                   <div class="input-group-prepend"> -->
+					<!-- 	                            <span class="input-group-text bg-transparent border-right-0"> -->
+					<!-- 	                                <i class="fal text-white fa-search"></i> -->
+					<!-- 	                            </span> -->
+					<!-- 	                        </div> -->
+					<!-- 	                       	<input type="text" id="csi_rm_header_list_3030_filter" placeholder="Search..." class="form-control csi-header-search-input-box-1055 form-control-sm" tabindex="1">  -->
+					<!-- 	                   </div> -->
+					<!-- 					<a href="#" onclick="return false;" -->
+					<!-- 					 class="btn-danger btn-search-close js-waves-off d-none" -->
+					<!-- 					 data-action="toggle" data-class="mobile-search-on"> <i -->
+					<!-- 					 class="fal fa-times"></i> -->
+					<!-- 				  </a> -->
+					<!-- 			</form> -->
+					<!-- 		</div> -->
+					<div class="ml-auto d-flex">
+						<!-- activate app search icon (mobile) -->
+						<div class="hidden-sm-up">
+							<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" class="header-icon" data-action="toggle"
+								data-class="mobile-search-on" data-focus="search-field" title="Search"> <i
+									class="fal fa-search"></i>
+							</a>
+						</div>
+						<!-- app settings -->
+
+
+
+
+
+
+
+						<!-- app user menu -->
+						<div>
+							<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" data-toggle="dropdown"
+								class="header-icon d-flex align-items-center justify-content-center ml-2">
+								<img src="./_Ethical_ powered by Finarya_files/Profile_picture.jpg"
+									class="profile-image rounded-circle" alt="Dr. Codex Lantern">
+								<!-- you can also add username next to the avatar with the codes below:
+									<span class="ml-1 mr-1 text-truncate text-truncate-header hidden-xs-down">Me</span>
+									<i class="ni ni-chevron-down hidden-xs-down"></i> -->
+							</a>
+							<div class="dropdown-menu dropdown-menu-animated dropdown-lg">
+								<div class="dropdown-header bg-trans-gradient d-flex flex-row py-4 rounded-top">
+									<div class="d-flex flex-row align-items-center mt-1 mb-1 color-white">
+										<span class="mr-2"> <img
+												src="./_Ethical_ powered by Finarya_files/Profile_picture.jpg"
+												class="rounded-circle profile-image" alt="Dr. Codex Lantern">
+										</span>
+										<div class="info-card-text">
+											<div class="small-font">
+												<div id="loggedInUserId" class="fs-lg text-truncate text-truncate-lg">
+													admin</div>
+												<span></span>
+												<span
+													class="text-truncate text-truncate-md opacity-80 ">test@test.com</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="dropdown-divider m-0"></div>
+								<!-- <a href="#" class="dropdown-item" data-action="app-reset"> <span
+						data-i18n="drpdwn.reset_layout">Reset Layout</span>
+					</a> 
+					<a href="#" class="dropdown-item" data-toggle="modal"
+						data-target=".js-modal-settings"> <span
+			
+						data-i18n="drpdwn.settings">Settings</span>
+					</a> -->
+								<div class="dropdown-divider m-0"></div>
+								<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" class="dropdown-item"
+									data-action="app-fullscreen">
+									<span data-i18n="drpdwn.fullscreen">Fullscreen</span> <i
+										class="float-right text-muted fw-n">F11</i>
+								</a> <a href="https://10.6.0.4:8443/atr/theme_3/dist/#" class="dropdown-item"
+									data-action="app-print"> <span data-i18n="drpdwn.print">Print</span> <i
+										class="float-right text-muted fw-n">Ctrl + P</i>
+								</a>
+								<!-- <div class="dropdown-multilevel dropdown-multilevel-left">
+						<div class="dropdown-item">Language</div>
+						<div class="dropdown-menu">
+							<a href="#?lang=fr" class="dropdown-item" data-action="lang"
+								data-lang="fr">FranÃ§ais</a> <a href="#?lang=en"
+								class="dropdown-item active" data-action="lang" data-lang="en">English
+								(US)</a> <a href="#?lang=es" class="dropdown-item"
+								data-action="lang" data-lang="es">EspaÃ±ol</a> <a
+								href="#?lang=ru" class="dropdown-item" data-action="lang"
+								data-lang="ru">Ð ÑƒÑÑÐºÐ¸Ð¹ ÑÐ·Ñ‹Ðº</a> <a href="#?lang=jp"
+								class="dropdown-item" data-action="lang" data-lang="jp">æ—¥æœ¬èªž</a>
+							<a href="#?lang=ch" class="dropdown-item" data-action="lang"
+								data-lang="ch">ä¸­æ–‡</a>
+						</div>
+					</div> -->
+								<div class="dropdown-divider m-0"></div>
+								<a class="dropdown-item fw-500 pt-3 pb-3" href="https://10.6.0.4:8443/atr/logout"> <span
+										data-i18n="drpdwn.page-logout">Logout</span> <span
+										class="float-right fw-n">admin</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</header>
+				<!-- END HEADER -->
+
+				<!-- BEGIN Page Content -->
+				<!-- PAGE CONTENT GOES IN HERE -->
+				<main id="js-page-content" style="padding: 0px;" role="main" class="cs-audit-landing-bg page-content">
+					<div style="display: flex; justify-content: space-around; height: 100%;">
+
+						<!-- PROCESS DOCUMENTATION -->
+
+						<div class="left_box accordionBox">
+							<div class="csi_remove_btn_landing_page"></div>
+							<ul id="js-nav-menu" class="nav-menu finarya_rm_landing_page_ul_sidebar">
+
+
+
+								<div class="d-flex position-relative py-3 px-4">
+									<i
+										class="fal fa-search color-success-700 position-absolute pos-left fs-lg px-3 py-2 mt-1 ml-4"></i>
+									<input type="text" id="Process_Documentation_list_filter"
+										class="form-control form-control-sm shadow-inset-1 pl-6 border-success"
+										placeholder="Search Here...">
+								</div>
+								<!-- nav-menu-reset will reset the font colors -->
+								<ul id="Process_Documentation_list" style="display: block !important;"
+									class="nav-menu nav-menu-reset csi-landing-page-parent-left-panel nav-menu-compact mb-sm-4 mb-md-0 rounded js-list-filter js-nav-built"
+									data-nav-accordion="true">
+
+
+
+								</ul>
+								<div class="filter-message js-filter-message m-0 text-left pl-4 py-3 fw-500"></div>
+							</ul>
+						</div>
+
+
+
+						<!-- RISK MANAGEMENT -->
+
+
+						<div class="left_box2 accordionBox">
+							<ul id="js-nav-menu" class="nav-menu finarya_rm_landing_page_ul_sidebar">
+
+
+
+								<div class="d-flex position-relative py-3 px-4">
+									<i
+										class="fal fa-search color-success-700 position-absolute pos-left fs-lg px-3 py-2 mt-1 ml-4"></i>
+									<input type="text" id="Risk_Management_list_filter"
+										class="form-control form-control-sm shadow-inset-1 pl-6 border-success"
+										placeholder="Search Here...">
+								</div>
+								<!-- nav-menu-reset will reset the font colors -->
+								<ul id="Risk_Management_list" style="display: block !important;"
+									class="csi-landing-page-parent-left-panel nav-menu nav-menu-reset nav-menu-compact mb-sm-4 mb-md-0 rounded js-list-filter js-nav-built"
+									data-nav-accordion="true">
+
+									<!-- 						<li th:if="${#authorization.expression('hasRole(''showOperationalRiskManagementPage'')')}"><a data-filter-tags="Operational Risk Management (ORM)"> <span class="nav-link-text">Operational Risk Management (ORM)</span> -->
+									<!-- 						</a></li> -->
+									<!-- 						<li th:if="${#authorization.expression('hasRole(''showBcpPlanningAndManagementPage'')')}"><a data-filter-tags="BCP Planning and Management"> <span class="nav-link-text">BCP Planning and Management</span> -->
+									<!-- 						</a></li> -->
+
+								</ul>
+								<div class="filter-message js-filter-message m-0 text-left pl-4 py-3 fw-500"></div>
+							</ul>
+						</div>
+
+
+
+						<!-- AUDIT -->
+
+
+
+						<div class="left_box3 accordionBox">
+							<ul id="js-nav-menu" class="nav-menu finarya_rm_landing_page_ul_sidebar">
+
+
+
+
+								<div class="d-flex position-relative py-3 px-4">
+									<i
+										class="fal fa-search color-success-700 position-absolute pos-left fs-lg px-3 py-2 mt-1 ml-4"></i>
+									<input type="text" id="Audit_list_filter"
+										class="form-control form-control-sm shadow-inset-1 pl-6 border-success"
+										placeholder="Search Here...">
+								</div>
+								<!-- nav-menu-reset will reset the font colors -->
+								<ul id="Audit_list" style="display: block !important;"
+									class="csi-landing-page-parent-left-panel nav-menu nav-menu-reset nav-menu-compact mb-sm-4 mb-md-0 rounded js-list-filter js-nav-built"
+									data-nav-accordion="true">
+
+									<!-- 						<li th:if="${#authorization.expression('hasAnyRole(''showCalibrateAuditScorePage'',''showListRatingCalibrationPage'',''showUploadRatingCalibrationPage'')')}"><a title="Rating Calibration" data-filter-tags="rating calibration"> <span class="nav-link-text" -->
+									<!-- 								data-i18n="nav.Rating_Calibration">Rating Calibration</span> -->
+									<!-- 						</a> -->
+									<!-- 							<ul> -->
+									<!-- 								<li th:if="${#authorization.expression('hasRole(''showCalibrateAuditScorePage'')')}"><a href="/showCalibrateAuditScorePage" title="Calibrate Rating" data-filter-tags="calibrate rating"> <span class="nav-link-text" data-i18n="nav.Calibrate_Rating">Calibrate Rating</span> -->
+									<!-- 								</a></li> -->
+									<!-- 								<li th:if="${#authorization.expression('hasRole(''showListRatingCalibrationPage'')')}"><a title="List Rating Calibration" data-filter-tags="list rating calibration"> <span class="nav-link-text" data-i18n="nav.List_Rating_Calibration">List Rating Calibration</span> -->
+									<!-- 								</a></li> -->
+									<!-- 								<li th:if="${#authorization.expression('hasRole(''showUploadRatingCalibrationPage'')')}"><a title="Upload Rating Calibration" data-filter-tags="upload rating calibration"> <span class="nav-link-text" data-i18n="nav.upload_rating_calibration">Upload Rating Calibration</span> -->
+									<!-- 								</a></li> -->
+									<!-- 							</ul></li> -->
+									<!-- 						<li th:if="${#authorization.expression('hasAnyRole(''showCreateInvestigationEventPage'',''showListCalibratedRatingPage'',''showUploadInvestigationEventPage'')')}"><a data-filter-tags="fraud investigation management"> <span class="nav-link-text"> Fraud Investigation Management </span> -->
+									<!-- 						</a> -->
+									<!-- 							<ul> -->
+									<!-- 								<li th:if="${#authorization.expression('hasRole(''showCreateInvestigationEventPage'')')}"><a title="Create Investigation Event" data-filter-tags="create investigation event"> <span class="nav-link-text" data-i18n="nav.font_icons_nextgen_icons_general">Create Investigation -->
+									<!-- 											Event</span> -->
+									<!-- 								</a></li> -->
+									<!-- 								<li th:if="${#authorization.expression('hasRole(''showListCalibratedRatingPage'')')}"><a title="List Calibrated Rating" data-filter-tags="list calibrated rating"> <span class="nav-link-text" data-i18n="nav.font_icons_nextgen_icons_general">List Investigation Event</span> -->
+									<!-- 								</a></li> -->
+									<!-- 								<li th:if="${#authorization.expression('hasRole(''showUploadInvestigationEventPage'')')}"><a title="Upload Investigation Event" data-filter-tags="upload investigation event"> <span class="nav-link-text" data-i18n="nav.font_icons_nextgen_icons_general">Upload Investigation -->
+									<!-- 											Event</span> -->
+									<!-- 								</a></li> -->
+									<!-- 							</ul></li> -->
+
+									<div class="filter-message js-filter-message m-0 text-left pl-4 py-3 fw-500"></div>
+
+
+								</ul>
+							</ul>
+						</div>
+
+
+
+						<!-- RCA & SOLUTION -->
+
+
+
+						<div class="left_box4 accordionBox">
+							<ul id="js-nav-menu" class="nav-menu finarya_rm_landing_page_ul_sidebar">
+
+
+								<div class="d-flex position-relative py-3 px-4">
+									<i
+										class="fal fa-search color-success-700 position-absolute pos-left fs-lg px-3 py-2 mt-1 ml-4"></i>
+									<input type="text" id="RCA_and_Solution_list_filter"
+										class="form-control form-control-sm shadow-inset-1 pl-6 border-success"
+										placeholder="Search Here...">
+								</div>
+								<!-- nav-menu-reset will reset the font colors -->
+								<ul id="RCA_and_Solution_list" style="display: block !important;"
+									class="csi-landing-page-parent-left-panel nav-menu nav-menu-reset nav-menu-compact mb-sm-4 mb-md-0 rounded js-list-filter js-nav-built"
+									data-nav-accordion="true">
+
+
+								</ul>
+								<div class="filter-message js-filter-message m-0 text-left pl-4 py-3 fw-500"></div>
+							</ul>
+						</div>
+
+
+						<!-- COMPLIANCE -->
+
+
+
+						<div class="left_box5 accordionBox">
+							<ul id="js-nav-menu" class="nav-menu finarya_rm_landing_page_ul_sidebar">
+
+
+								<div class="d-flex position-relative py-3 px-4">
+									<i
+										class="fal fa-search color-success-700 position-absolute pos-left fs-lg px-3 py-2 mt-1 ml-4"></i>
+									<input type="text" id="Compliance_list_filter"
+										class="form-control form-control-sm shadow-inset-1 pl-6 border-success"
+										placeholder="Search Here...">
+								</div>
+								<!-- nav-menu-reset will reset the font colors -->
+								<ul id="Compliance_list" style="display: block !important;"
+									class="csi-landing-page-parent-left-panel nav-menu nav-menu-reset nav-menu-compact mb-sm-4 mb-md-0 rounded js-list-filter js-nav-built"
+									data-nav-accordion="true">
+
+
+
+
+									<!-- ANTI-MONEY LAUNDERING -->
+
+
+
+
+
+
+									<!-- REGULATORY RISK MANAGEMENT -->
+
+
+
+
+
+
+									<!-- ETHICS MANAGEMENT -->
+
+
+
+								</ul>
+								<div class="filter-message js-filter-message m-0 text-left pl-4 py-3 fw-500"></div>
+							</ul>
+						</div>
+
+
+
+						<!-- LEGAL CASE MANAGEMENT -->
+
+
+
+						<div class="left_box6 accordionBox">
+							<ul id="js-nav-menu" class="nav-menu finarya_rm_landing_page_ul_sidebar">
+
+
+
+
+
+								<div class="d-flex position-relative py-3 px-4">
+									<i
+										class="fal fa-search color-success-700 position-absolute pos-left fs-lg px-3 py-2 mt-1 ml-4"></i>
+									<input type="text" id="Legal_Case_Management_list_filter"
+										class="form-control form-control-sm shadow-inset-1 pl-6 border-success"
+										placeholder="Search Here...">
+								</div>
+
+								<!-- nav-menu-reset will reset the font colors -->
+
+								<ul id="Legal_Case_Management_list" style="display: block !important;"
+									class="csi-landing-page-parent-left-panel nav-menu nav-menu-reset nav-menu-compact mb-sm-4 mb-md-0 rounded js-list-filter js-nav-built"
+									data-nav-accordion="true">
+
+
+
+
+									<!-- LENS -->
+
+
+
+								</ul>
+								<div class="filter-message js-filter-message m-0 text-left pl-4 py-3 fw-500"></div>
+							</ul>
+						</div>
+
+
+
+						<!-- DASHBOARD & MIS -->
+
+
+
+
+						<div class="left_box7 accordionBox">
+							<ul id="js-nav-menu" class="nav-menu finarya_rm_landing_page_ul_sidebar">
+
+
+
+								<div class="d-flex position-relative py-3 px-4">
+									<i
+										class="fal fa-search color-success-700 position-absolute pos-left fs-lg px-3 py-2 mt-1 ml-4"></i>
+									<input type="text" id="Role_wise_Dashboard_filter"
+										class="form-control form-control-sm shadow-inset-1 pl-6 border-success"
+										placeholder="Search Here...">
+								</div>
+								<!-- nav-menu-reset will reset the font colors -->
+								<ul id="Role_wise_Dashboard_list" style="display: block !important;"
+									class="csi-landing-page-parent-left-panel nav-menu nav-menu-reset nav-menu-compact mb-sm-4 mb-md-0 rounded js-list-filter js-nav-built"
+									data-nav-accordion="true">
+									<!--	<li>
+							<a href="/showRolewiseLandingPage" data-filter-tags="row wise"> 
+								<span class="nav-link-text">Role-wise Dashboard</span>
+							</a>
+						</li> -->
+
+
+
+									<!-- ROLE-WISE DASHBOARD -->
+
+
+
+
+
+
+
+
+								</ul>
+								<div class="filter-message js-filter-message m-0 text-left pl-4 py-3 fw-500"></div>
+							</ul>
+						</div>
+
+
+
+						<!-- LEARNING PORTAL -->
+
+
+
+						<div class="left_box8 accordionBox">
+							<ul id="js-nav-menu" class="nav-menu finarya_rm_landing_page_ul_sidebar">
+
+
+								<div class="d-flex position-relative py-3 px-4">
+									<i
+										class="fal fa-search color-success-700 position-absolute pos-left fs-lg px-3 py-2 mt-1 ml-4"></i>
+									<input type="text" id="Learning_Portal_list_filter"
+										class="form-control form-control-sm shadow-inset-1 pl-6 border-success"
+										placeholder="Search Here...">
+								</div>
+								<!-- nav-menu-reset will reset the font colors -->
+								<ul id="Learning_Portal_list" style="display: block !important;"
+									class="csi-landing-page-parent-left-panel nav-menu nav-menu-reset nav-menu-compact mb-sm-4 mb-md-0 rounded js-list-filter js-nav-built"
+									data-nav-accordion="true">
+
+
+
+								</ul>
+								<div class="filter-message js-filter-message m-0 text-left pl-4 py-3 fw-500"></div>
+							</ul>
+						</div>
+
+
+
+						<!-- FINANCE -->
+
+
+						<div class="left_box9 accordionBox">
+							<ul id="js-nav-menu" class="nav-menu finarya_rm_landing_page_ul_sidebar"
+								style="height: 100%; width: 270px !important;">
+
+
+
+								<div class="d-flex position-relative py-3 px-4">
+									<i
+										class="fal fa-search color-success-700 position-absolute pos-left fs-lg px-3 py-2 mt-1 ml-4"></i>
+									<input type="text" id="Finance_list_filter"
+										class="form-control form-control-sm shadow-inset-1 pl-6 border-success"
+										placeholder="Search Here...">
+								</div>
+								<!-- nav-menu-reset will reset the font colors -->
+								<ul id="Finance_list" style="display: block !important;"
+									class="csi-landing-page-parent-left-panel nav-menu nav-menu-reset nav-menu-compact mb-sm-4 mb-md-0 rounded js-list-filter js-nav-built"
+									data-nav-accordion="true">
+
+
+
+
+
+
+								</ul>
+								<div class="filter-message js-filter-message m-0 text-left pl-4 py-3 fw-500"></div>
+							</ul>
+						</div>
+						<div class="container">
+							<div class="text-center" id="ethicalSideMapMenu" style="padding: 11.5px; flex: 0.6;">
+								<a id="csi-fullScreenEthicalDiv1219">
+									<h2
+										style="font-size: 1.6rem; font-weight: 700; color: #1a3c6e; letter-spacing: 1px; margin: 0;">
+										ATR Management Module</h2>
+								</a>
+							</div>
+
+							<div class="row dashboard-cards csi-landing-page-card-0836"
+								style="justify-content: center; align-items: center; min-height: 60vh; display: flex; margin: 0;">
+								<div class="card csi-Ethical-card-border-color-2"
+									style="cursor:pointer; background-color:white;"
+									onclick="toggleCustomSidebar(true); event.stopPropagation(); event.preventDefault();">
+									<a id="">
+										<div class="card-title">
+											<div class="csi_rm_div_flex_2307">
+												<img src="./_Ethical_ powered by Finarya_files/04_cards_colour_images.png"
+													class="csi_img_audit_logo">
+												<h5 class="divflex_card_title">ATR Management</h5>
+												<img src="./_Ethical_ powered by Finarya_files/02 icon_risk_management.svg"
+													class="logo_csi_landing_page" alt="">
+											</div>
+											<div class="csi-ethical-hide-div-0829">
+												<ul class="csi-Ethical-menu-ul-2">
+													<li>Operational Risk Management (ORM)</li>
+													<li>BCP Planning &amp; Management</li>
+												</ul>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+
+						</div>
+					</div>
+			</div>
+		</div>
+		</main>
+		<!-- END PAGE CONTENT -->
+
+
+		<!-- this overlay is activated only when mobile menu is triggered -->
+		<div class="page-content-overlay" data-action="toggle" data-class="mobile-nav-on"></div>
+		<!-- END Page Content -->
+
+		<!-- FOOTER -->
+		<!-- <footer th:replace="common_3/footer :: page_footer"></footer> -->
+		<!-- END FOOTER -->
+
+		<!-- SHORTCUTS -->
+		<div class="modal fade modal-backdrop-transparent" id="modal-shortcut" tabindex="-1" role="dialog"
+			aria-labelledby="modal-shortcut" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-top modal-transparent" role="document">
+				<div class="modal-content">
+					<div class="modal-body">
+						<ul class="app-list w-auto h-auto p-0 text-left">
+							<li>
+								<a href="https://10.6.0.4:8443/atr/theme_3/dist/intel_introduction.html"
+									class="app-list-item text-white border-0 m-0">
+									<div class="icon-stack">
+										<i class="base base-7 icon-stack-3x opacity-100 color-primary-500 "></i>
+										<i class="base base-7 icon-stack-2x opacity-100 color-primary-300 "></i>
+										<i class="fal fa-home icon-stack-1x opacity-100 color-white"></i>
+									</div>
+									<span class="app-list-name">
+										Home
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="https://10.6.0.4:8443/atr/theme_3/dist/page_inbox_general.html"
+									class="app-list-item text-white border-0 m-0">
+									<div class="icon-stack">
+										<i class="base base-7 icon-stack-3x opacity-100 color-success-500 "></i>
+										<i class="base base-7 icon-stack-2x opacity-100 color-success-300 "></i>
+										<i class="ni ni-envelope icon-stack-1x text-white"></i>
+									</div>
+									<span class="app-list-name">
+										Inbox
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="https://10.6.0.4:8443/atr/theme_3/dist/intel_introduction.html"
+									class="app-list-item text-white border-0 m-0">
+									<div class="icon-stack">
+										<i class="base base-7 icon-stack-2x opacity-100 color-primary-300 "></i>
+										<i class="fal fa-plus icon-stack-1x opacity-100 color-white"></i>
+									</div>
+									<span class="app-list-name">
+										Add More
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END SHORTCUTS -->
+
+		<!-- COLOR-PROFILE -->
+		<p id="js-color-profile" class="d-none">
+			<span class="color-primary-50"></span>
+			<span class="color-primary-100"></span>
+			<span class="color-primary-200"></span>
+			<span class="color-primary-300"></span>
+			<span class="color-primary-400"></span>
+			<span class="color-primary-500"></span>
+			<span class="color-primary-600"></span>
+			<span class="color-primary-700"></span>
+			<span class="color-primary-800"></span>
+			<span class="color-primary-900"></span>
+			<span class="color-info-50"></span>
+			<span class="color-info-100"></span>
+			<span class="color-info-200"></span>
+			<span class="color-info-300"></span>
+			<span class="color-info-400"></span>
+			<span class="color-info-500"></span>
+			<span class="color-info-600"></span>
+			<span class="color-info-700"></span>
+			<span class="color-info-800"></span>
+			<span class="color-info-900"></span>
+			<span class="color-danger-50"></span>
+			<span class="color-danger-100"></span>
+			<span class="color-danger-200"></span>
+			<span class="color-danger-300"></span>
+			<span class="color-danger-400"></span>
+			<span class="color-danger-500"></span>
+			<span class="color-danger-600"></span>
+			<span class="color-danger-700"></span>
+			<span class="color-danger-800"></span>
+			<span class="color-danger-900"></span>
+			<span class="color-warning-50"></span>
+			<span class="color-warning-100"></span>
+			<span class="color-warning-200"></span>
+			<span class="color-warning-300"></span>
+			<span class="color-warning-400"></span>
+			<span class="color-warning-500"></span>
+			<span class="color-warning-600"></span>
+			<span class="color-warning-700"></span>
+			<span class="color-warning-800"></span>
+			<span class="color-warning-900"></span>
+			<span class="color-success-50"></span>
+			<span class="color-success-100"></span>
+			<span class="color-success-200"></span>
+			<span class="color-success-300"></span>
+			<span class="color-success-400"></span>
+			<span class="color-success-500"></span>
+			<span class="color-success-600"></span>
+			<span class="color-success-700"></span>
+			<span class="color-success-800"></span>
+			<span class="color-success-900"></span>
+			<span class="color-fusion-50"></span>
+			<span class="color-fusion-100"></span>
+			<span class="color-fusion-200"></span>
+			<span class="color-fusion-300"></span>
+			<span class="color-fusion-400"></span>
+			<span class="color-fusion-500"></span>
+			<span class="color-fusion-600"></span>
+			<span class="color-fusion-700"></span>
+			<span class="color-fusion-800"></span>
+			<span class="color-fusion-900"></span>
+		</p>
+		<!-- END COLOR-PROFILE -->
+
+	</div>
+
+	</div>
+	</div>
+	<!-- END Page Wrapper -->
+
+
+	<!-- QUICK MENU -->
+	<!-- <div th:replace="common_3/quick_menu :: quick_menu"></div> -->
+	<!-- END QUICK MENU -->
+
+	<!-- MESSENGER -->
+	<div class="modal fade js-modal-messenger modal-backdrop-transparent" tabindex="-1" role="dialog"
+		aria-hidden="true">
+		<div class="modal-dialog modal-dialog-right">
+			<div class="modal-content h-100">
+				<div class="dropdown-header bg-trans-gradient d-flex align-items-center w-100">
+					<div class="d-flex flex-row align-items-center mt-1 mb-1 color-white">
+						<span class="mr-2">
+							<span class="rounded-circle profile-image d-block"
+								style="background-image:url(&#39;img/demo/avatars/avatar-d.png&#39;); background-size: cover;"></span>
+						</span>
+						<div class="info-card-text">
+							<a href="javascript:void(0);" class="fs-lg text-truncate text-truncate-lg text-white"
+								data-toggle="dropdown" aria-expanded="false">
+								Tracey Chang
+								<i class="fas fa-angle-down d-inline-block ml-1 text-white fs-md"></i>
+							</a>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="https://10.6.0.4:8443/atr/theme_3/dist/#">Send Email</a>
+								<a class="dropdown-item" href="https://10.6.0.4:8443/atr/theme_3/dist/#">Create
+									Appointment</a>
+								<a class="dropdown-item" href="https://10.6.0.4:8443/atr/theme_3/dist/#">Block User</a>
+							</div>
+							<span class="text-truncate text-truncate-md opacity-80">IT Director</span>
+						</div>
+					</div>
+					<button type="button" class="close text-white position-absolute pos-top pos-right p-2 m-1 mr-2"
+						data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"><i class="fal fa-times"></i></span>
+					</button>
+				</div>
+				<div class="modal-body p-0 h-100 d-flex">
+					<!-- BEGIN msgr-list -->
+					<div
+						class="msgr-list d-flex flex-column bg-faded border-faded border-top-0 border-right-0 border-bottom-0 position-absolute pos-top pos-bottom">
+						<div>
+							<div
+								class="height-4 width-3 h3 m-0 d-flex justify-content-center flex-column color-primary-500 pl-3 mt-2">
+								<i class="fal fa-search"></i>
+							</div>
+							<input type="text" class="form-control bg-white" id="msgr_listfilter_input"
+								placeholder="Filter contacts" aria-label="FriendSearch"
+								data-listfilter="#js-msgr-listfilter">
+						</div>
+						<div class="flex-1 h-100 custom-scroll">
+							<div class="slimScrollDiv"
+								style="position: relative; overflow: hidden; width: auto; height: 100%;">
+								<div class="w-100" style="overflow: hidden; width: auto; height: 100%;">
+									<ul id="js-msgr-listfilter" class="list-unstyled m-0 js-list-filter">
+										<li>
+											<a href="https://10.6.0.4:8443/atr/theme_3/dist/#"
+												class="d-table w-100 px-2 py-2 text-dark hover-white"
+												data-filter-tags="tracey chang online">
+												<div class="d-table-cell align-middle status status-success status-sm ">
+													<span class="profile-image-md rounded-circle d-block"
+														style="background-image:url(&#39;img/demo/avatars/avatar-d.png&#39;); background-size: cover;"></span>
+												</div>
+												<div class="d-table-cell w-100 align-middle pl-2 pr-2">
+													<div class="text-truncate text-truncate-md">
+														Tracey Chang
+														<small class="d-block font-italic text-success fs-xs">
+															Online
+														</small>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="https://10.6.0.4:8443/atr/theme_3/dist/#"
+												class="d-table w-100 px-2 py-2 text-dark hover-white"
+												data-filter-tags="oliver kopyuv online">
+												<div class="d-table-cell align-middle status status-success status-sm ">
+													<span class="profile-image-md rounded-circle d-block"
+														style="background-image:url(&#39;img/demo/avatars/avatar-b.png&#39;); background-size: cover;"></span>
+												</div>
+												<div class="d-table-cell w-100 align-middle pl-2 pr-2">
+													<div class="text-truncate text-truncate-md">
+														Oliver Kopyuv
+														<small class="d-block font-italic text-success fs-xs">
+															Online
+														</small>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="https://10.6.0.4:8443/atr/theme_3/dist/#"
+												class="d-table w-100 px-2 py-2 text-dark hover-white"
+												data-filter-tags="dr john cook phd away">
+												<div class="d-table-cell align-middle status status-warning status-sm ">
+													<span class="profile-image-md rounded-circle d-block"
+														style="background-image:url(&#39;img/demo/avatars/avatar-e.png&#39;); background-size: cover;"></span>
+												</div>
+												<div class="d-table-cell w-100 align-middle pl-2 pr-2">
+													<div class="text-truncate text-truncate-md">
+														Dr. John Cook PhD
+														<small class="d-block font-italic fs-xs">
+															Away
+														</small>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="https://10.6.0.4:8443/atr/theme_3/dist/#"
+												class="d-table w-100 px-2 py-2 text-dark hover-white"
+												data-filter-tags="ali amdaney online">
+												<div class="d-table-cell align-middle status status-success status-sm ">
+													<span class="profile-image-md rounded-circle d-block"
+														style="background-image:url(&#39;img/demo/avatars/avatar-g.png&#39;); background-size: cover;"></span>
+												</div>
+												<div class="d-table-cell w-100 align-middle pl-2 pr-2">
+													<div class="text-truncate text-truncate-md">
+														Ali Amdaney
+														<small class="d-block font-italic fs-xs text-success">
+															Online
+														</small>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="https://10.6.0.4:8443/atr/theme_3/dist/#"
+												class="d-table w-100 px-2 py-2 text-dark hover-white"
+												data-filter-tags="sarah mcbrook online">
+												<div class="d-table-cell align-middle status status-success status-sm">
+													<span class="profile-image-md rounded-circle d-block"
+														style="background-image:url(&#39;img/demo/avatars/avatar-h.png&#39;); background-size: cover;"></span>
+												</div>
+												<div class="d-table-cell w-100 align-middle pl-2 pr-2">
+													<div class="text-truncate text-truncate-md">
+														Sarah McBrook
+														<small class="d-block font-italic fs-xs text-success">
+															Online
+														</small>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="https://10.6.0.4:8443/atr/theme_3/dist/#"
+												class="d-table w-100 px-2 py-2 text-dark hover-white"
+												data-filter-tags="ali amdaney offline">
+												<div class="d-table-cell align-middle status status-sm">
+													<span class="profile-image-md rounded-circle d-block"
+														style="background-image:url(&#39;img/demo/avatars/avatar-a.png&#39;); background-size: cover;"></span>
+												</div>
+												<div class="d-table-cell w-100 align-middle pl-2 pr-2">
+													<div class="text-truncate text-truncate-md">
+														oliver.kopyuv@gotbootstrap.com
+														<small class="d-block font-italic fs-xs">
+															Offline
+														</small>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="https://10.6.0.4:8443/atr/theme_3/dist/#"
+												class="d-table w-100 px-2 py-2 text-dark hover-white"
+												data-filter-tags="ali amdaney busy">
+												<div class="d-table-cell align-middle status status-danger status-sm">
+													<span class="profile-image-md rounded-circle d-block"
+														style="background-image:url(&#39;img/demo/avatars/avatar-j.png&#39;); background-size: cover;"></span>
+												</div>
+												<div class="d-table-cell w-100 align-middle pl-2 pr-2">
+													<div class="text-truncate text-truncate-md">
+														oliver.kopyuv@gotbootstrap.com
+														<small class="d-block font-italic fs-xs text-danger">
+															Busy
+														</small>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="https://10.6.0.4:8443/atr/theme_3/dist/#"
+												class="d-table w-100 px-2 py-2 text-dark hover-white"
+												data-filter-tags="ali amdaney offline">
+												<div class="d-table-cell align-middle status status-sm">
+													<span class="profile-image-md rounded-circle d-block"
+														style="background-image:url(&#39;img/demo/avatars/avatar-c.png&#39;); background-size: cover;"></span>
+												</div>
+												<div class="d-table-cell w-100 align-middle pl-2 pr-2">
+													<div class="text-truncate text-truncate-md">
+														oliver.kopyuv@gotbootstrap.com
+														<small class="d-block font-italic fs-xs">
+															Offline
+														</small>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="https://10.6.0.4:8443/atr/theme_3/dist/#"
+												class="d-table w-100 px-2 py-2 text-dark hover-white"
+												data-filter-tags="ali amdaney inactive">
+												<div class="d-table-cell align-middle">
+													<span class="profile-image-md rounded-circle d-block"
+														style="background-image:url(&#39;img/demo/avatars/avatar-m.png&#39;); background-size: cover;"></span>
+												</div>
+												<div class="d-table-cell w-100 align-middle pl-2 pr-2">
+													<div class="text-truncate text-truncate-md">
+														+714651347790
+														<small class="d-block font-italic fs-xs opacity-50">
+															Missed Call
+														</small>
+													</div>
+												</div>
+											</a>
+										</li>
+									</ul>
+									<div class="filter-message js-filter-message"></div>
+								</div>
+								<div class="slimScrollBar"
+									style="background: rgba(0, 0, 0, 0.6); width: 4px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 4px;">
+								</div>
+								<div class="slimScrollRail"
+									style="width: 4px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(250, 250, 250); opacity: 0.2; z-index: 90; right: 4px;">
+								</div>
+							</div>
+						</div>
+						<div>
+							<a class="fs-xl d-flex align-items-center p-3">
+								<i class="fal fa-cogs"></i>
+							</a>
+						</div>
+					</div>
+					<!-- END msgr-list -->
+					<!-- BEGIN msgr -->
+					<div class="msgr d-flex h-100 flex-column bg-white">
+						<!-- BEGIN custom-scroll -->
+						<div class="custom-scroll flex-1 h-100">
+							<div class="slimScrollDiv"
+								style="position: relative; overflow: hidden; width: auto; height: 100%;">
+								<div id="chat_container" class="w-100 p-4"
+									style="overflow: hidden; width: auto; height: 100%;">
+									<!-- start .chat-segment -->
+									<div class="chat-segment">
+										<div class="time-stamp text-center mb-2 fw-400">
+											Jun 19
+										</div>
+									</div>
+									<!--  end .chat-segment -->
+									<!-- start .chat-segment -->
+									<div class="chat-segment chat-segment-sent">
+										<div class="chat-message">
+											<p>
+												Hey Tracey, did you get my files?
+											</p>
+										</div>
+										<div class="text-right fw-300 text-muted mt-1 fs-xs">
+											3:00 pm
+										</div>
+									</div>
+									<!--  end .chat-segment -->
+									<!-- start .chat-segment -->
+									<div class="chat-segment chat-segment-get">
+										<div class="chat-message">
+											<p>
+												Hi
+											</p>
+											<p>
+												Sorry going through a busy time in office. Yes I analyzed the solution.
+											</p>
+											<p>
+												It will require some resource, which I could not manage.
+											</p>
+										</div>
+										<div class="fw-300 text-muted mt-1 fs-xs">
+											3:24 pm
+										</div>
+									</div>
+									<!--  end .chat-segment -->
+									<!-- start .chat-segment -->
+									<div class="chat-segment chat-segment-sent chat-start">
+										<div class="chat-message">
+											<p>
+												Okay
+											</p>
+										</div>
+									</div>
+									<!--  end .chat-segment -->
+									<!-- start .chat-segment -->
+									<div class="chat-segment chat-segment-sent chat-end">
+										<div class="chat-message">
+											<p>
+												Sending you some dough today, you can allocate the resources to this
+												project.
+											</p>
+										</div>
+										<div class="text-right fw-300 text-muted mt-1 fs-xs">
+											3:26 pm
+										</div>
+									</div>
+									<!--  end .chat-segment -->
+									<!-- start .chat-segment -->
+									<div class="chat-segment chat-segment-get chat-start">
+										<div class="chat-message">
+											<p>
+												Perfect. Thanks a lot!
+											</p>
+										</div>
+									</div>
+									<!--  end .chat-segment -->
+									<!-- start .chat-segment -->
+									<div class="chat-segment chat-segment-get">
+										<div class="chat-message">
+											<p>
+												I will have them ready by tonight.
+											</p>
+										</div>
+									</div>
+									<!--  end .chat-segment -->
+									<!-- start .chat-segment -->
+									<div class="chat-segment chat-segment-get chat-end">
+										<div class="chat-message">
+											<p>
+												Cheers
+											</p>
+										</div>
+									</div>
+									<!--  end .chat-segment -->
+									<!-- start .chat-segment for timestamp -->
+									<div class="chat-segment">
+										<div class="time-stamp text-center mb-2 fw-400">
+											Jun 20
+										</div>
+									</div>
+									<!--  end .chat-segment for timestamp -->
+								</div>
+								<div class="slimScrollBar"
+									style="background: rgba(0, 0, 0, 0.6); width: 4px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 4px;">
+								</div>
+								<div class="slimScrollRail"
+									style="width: 4px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(250, 250, 250); opacity: 0.2; z-index: 90; right: 4px;">
+								</div>
+							</div>
+						</div>
+						<!-- END custom-scroll  -->
+						<!-- BEGIN msgr__chatinput -->
+						<div class="d-flex flex-column">
+							<div
+								class="border-faded border-right-0 border-bottom-0 border-left-0 flex-1 mr-3 ml-3 position-relative shadow-top">
+								<div class="pt-3 pb-1 pr-0 pl-0 rounded-0" tabindex="-1">
+									<div id="msgr_input" contenteditable="true"
+										data-placeholder="Type your message here..."
+										class="height-10 form-content-editable"></div>
+								</div>
+							</div>
+							<div class="height-8 px-3 d-flex flex-row align-items-center flex-wrap flex-shrink-0">
+								<a href="javascript:void(0);"
+									class="btn btn-icon fs-xl width-1 mr-1 waves-effect waves-themed"
+									data-toggle="tooltip" data-original-title="More options" data-placement="top">
+									<i class="fal fa-ellipsis-v-alt color-fusion-300"></i>
+								</a>
+								<a href="javascript:void(0);" class="btn btn-icon fs-xl mr-1 waves-effect waves-themed"
+									data-toggle="tooltip" data-original-title="Attach files" data-placement="top">
+									<i class="fal fa-paperclip color-fusion-300"></i>
+								</a>
+								<a href="javascript:void(0);" class="btn btn-icon fs-xl mr-1 waves-effect waves-themed"
+									data-toggle="tooltip" data-original-title="Insert photo" data-placement="top">
+									<i class="fal fa-camera color-fusion-300"></i>
+								</a>
+								<div class="ml-auto">
+									<a href="javascript:void(0);"
+										class="btn btn-info waves-effect waves-themed">Send</a>
+								</div>
+							</div>
+						</div>
+						<!-- END msgr__chatinput -->
+					</div>
+					<!-- END msgr -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END MESSENGER -->
+
+	<!-- PAGE_SETTINGS -->
+	<div class="modal fade js-modal-settings modal-backdrop-transparent" tabindex="-1" role="dialog" aria-hidden="true">
+		<!-- BEGIN Page Settings -->
+		<div class="modal-dialog modal-dialog-right modal-md">
+			<div class="modal-content">
+				<div class="dropdown-header bg-trans-gradient d-flex justify-content-center align-items-center w-100">
+					<h4 class="m-0 text-center color-white">
+						Layout Settings
+						<small class="mb-0 opacity-80">User Interface Settings</small>
+					</h4>
+					<button type="button" class="close text-white position-absolute pos-top pos-right p-2 m-1 mr-2"
+						data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"><i class="fal fa-times"></i></span>
+					</button>
+				</div>
+				<div class="modal-body p-0">
+					<div class="settings-panel">
+						<div class="mt-4 d-table w-100 px-5">
+							<div class="d-table-cell align-middle">
+								<h5 class="p-0">
+									App Layout
+								</h5>
+							</div>
+						</div>
+						<div class="list" id="fh">
+							<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" onclick="return false;"
+								class="btn btn-switch" data-action="toggle" data-class="header-function-fixed"></a>
+							<span class="onoffswitch-title">Fixed Header</span>
+							<span class="onoffswitch-title-desc">header is in a fixed at all times</span>
+						</div>
+						<div class="list" id="nff">
+							<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" onclick="return false;"
+								class="btn btn-switch" data-action="toggle" data-class="nav-function-fixed"></a>
+							<span class="onoffswitch-title">Fixed Navigation</span>
+							<span class="onoffswitch-title-desc">left panel is fixed</span>
+						</div>
+						<div class="list" id="nfm">
+							<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" onclick="return false;"
+								class="btn btn-switch" data-action="toggle" data-class="nav-function-minify"></a>
+							<span class="onoffswitch-title">Minify Navigation</span>
+							<span class="onoffswitch-title-desc">Skew nav to maximize space</span>
+						</div>
+						<div class="list" id="nfh">
+							<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" onclick="return false;"
+								class="btn btn-switch" data-action="toggle" data-class="nav-function-hidden"></a>
+							<span class="onoffswitch-title">Hide Navigation</span>
+							<span class="onoffswitch-title-desc">roll mouse on edge to reveal</span>
+						</div>
+						<div class="list" id="nft">
+							<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" onclick="return false;"
+								class="btn btn-switch" data-action="toggle" data-class="nav-function-top"></a>
+							<span class="onoffswitch-title">Top Navigation</span>
+							<span class="onoffswitch-title-desc">Relocate left pane to top</span>
+						</div>
+						<div class="list" id="fff">
+							<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" onclick="return false;"
+								class="btn btn-switch" data-action="toggle" data-class="footer-function-fixed"></a>
+							<span class="onoffswitch-title">Fixed Footer</span>
+							<span class="onoffswitch-title-desc">page footer is fixed</span>
+						</div>
+						<div class="list" id="mmb">
+							<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" onclick="return false;"
+								class="btn btn-switch" data-action="toggle" data-class="mod-main-boxed"></a>
+							<span class="onoffswitch-title">Boxed Layout</span>
+							<span class="onoffswitch-title-desc">Encapsulates to a container</span>
+						</div>
+						<div class="expanded">
+							<ul class="mb-3 mt-1">
+								<li>
+									<div class="bg-fusion-50" data-action="toggle" data-class="mod-bg-1"></div>
+								</li>
+								<li>
+									<div class="bg-warning-200" data-action="toggle" data-class="mod-bg-2"></div>
+								</li>
+								<li>
+									<div class="bg-primary-200" data-action="toggle" data-class="mod-bg-3"></div>
+								</li>
+								<li>
+									<div class="bg-success-300" data-action="toggle" data-class="mod-bg-4"></div>
+								</li>
+								<li>
+									<div class="bg-white border" data-action="toggle" data-class="mod-bg-none"></div>
+								</li>
+							</ul>
+							<div class="list" id="mbgf">
+								<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" onclick="return false;"
+									class="btn btn-switch" data-action="toggle" data-class="mod-fixed-bg"></a>
+								<span class="onoffswitch-title">Fixed Background</span>
+							</div>
+						</div>
+						<div class="mt-4 d-table w-100 px-5">
+							<div class="d-table-cell align-middle">
+								<h5 class="p-0">
+									Mobile Menu
+								</h5>
+							</div>
+						</div>
+						<div class="list" id="nmp">
+							<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" onclick="return false;"
+								class="btn btn-switch" data-action="toggle" data-class="nav-mobile-push"></a>
+							<span class="onoffswitch-title">Push Content</span>
+							<span class="onoffswitch-title-desc">Content pushed on menu reveal</span>
+						</div>
+						<div class="list" id="nmno">
+							<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" onclick="return false;"
+								class="btn btn-switch" data-action="toggle" data-class="nav-mobile-no-overlay"></a>
+							<span class="onoffswitch-title">No Overlay</span>
+							<span class="onoffswitch-title-desc">Removes mesh on menu reveal</span>
+						</div>
+						<div class="list" id="sldo">
+							<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" onclick="return false;"
+								class="btn btn-switch" data-action="toggle" data-class="nav-mobile-slide-out"></a>
+							<span class="onoffswitch-title">Off-Canvas <sup>(beta)</sup></span>
+							<span class="onoffswitch-title-desc">Content overlaps menu</span>
+						</div>
+						<div class="mt-4 d-table w-100 px-5">
+							<div class="d-table-cell align-middle">
+								<h5 class="p-0">
+									Accessibility
+								</h5>
+							</div>
+						</div>
+						<div class="list" id="mbf">
+							<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" onclick="return false;"
+								class="btn btn-switch" data-action="toggle" data-class="mod-bigger-font"></a>
+							<span class="onoffswitch-title">Bigger Content Font</span>
+							<span class="onoffswitch-title-desc">content fonts are bigger for readability</span>
+						</div>
+						<div class="list" id="mhc">
+							<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" onclick="return false;"
+								class="btn btn-switch" data-action="toggle" data-class="mod-high-contrast"></a>
+							<span class="onoffswitch-title">High Contrast Text (WCAG 2 AA)</span>
+							<span class="onoffswitch-title-desc">4.5:1 text contrast ratio</span>
+						</div>
+						<div class="list" id="mcb">
+							<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" onclick="return false;"
+								class="btn btn-switch" data-action="toggle" data-class="mod-color-blind"></a>
+							<span class="onoffswitch-title">Daltonism <sup>(beta)</sup> </span>
+							<span class="onoffswitch-title-desc">color vision deficiency</span>
+						</div>
+						<div class="list" id="mpc">
+							<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" onclick="return false;"
+								class="btn btn-switch" data-action="toggle" data-class="mod-pace-custom"></a>
+							<span class="onoffswitch-title">Preloader Inside</span>
+							<span class="onoffswitch-title-desc">preloader will be inside content</span>
+						</div>
+						<div class="list" id="mpi">
+							<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" onclick="return false;"
+								class="btn btn-switch" data-action="toggle" data-class="mod-panel-icon"></a>
+							<span class="onoffswitch-title">SmartPanel Icons (not Panels)</span>
+							<span class="onoffswitch-title-desc">smartpanel buttons will appear as icons</span>
+						</div>
+						<div class="mt-4 d-table w-100 px-5">
+							<div class="d-table-cell align-middle">
+								<h5 class="p-0">
+									Global Modifications
+								</h5>
+							</div>
+						</div>
+						<div class="list" id="mcbg">
+							<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" onclick="return false;"
+								class="btn btn-switch" data-action="toggle" data-class="mod-clean-page-bg"></a>
+							<span class="onoffswitch-title">Clean Page Background</span>
+							<span class="onoffswitch-title-desc">adds more whitespace</span>
+						</div>
+						<div class="list" id="mhni">
+							<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" onclick="return false;"
+								class="btn btn-switch" data-action="toggle" data-class="mod-hide-nav-icons"></a>
+							<span class="onoffswitch-title">Hide Navigation Icons</span>
+							<span class="onoffswitch-title-desc">invisible navigation icons</span>
+						</div>
+						<div class="list" id="dan">
+							<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" onclick="return false;"
+								class="btn btn-switch" data-action="toggle" data-class="mod-disable-animation"></a>
+							<span class="onoffswitch-title">Disable CSS Animation</span>
+							<span class="onoffswitch-title-desc">Disables CSS based animations</span>
+						</div>
+						<div class="list" id="mhic">
+							<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" onclick="return false;"
+								class="btn btn-switch" data-action="toggle" data-class="mod-hide-info-card"></a>
+							<span class="onoffswitch-title">Hide Info Card</span>
+							<span class="onoffswitch-title-desc">Hides info card from left panel</span>
+						</div>
+						<div class="list" id="mlph">
+							<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" onclick="return false;"
+								class="btn btn-switch" data-action="toggle" data-class="mod-lean-subheader"></a>
+							<span class="onoffswitch-title">Lean Subheader</span>
+							<span class="onoffswitch-title-desc">distinguished page header</span>
+						</div>
+						<div class="list" id="mnl">
+							<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" onclick="return false;"
+								class="btn btn-switch" data-action="toggle" data-class="mod-nav-link"></a>
+							<span class="onoffswitch-title">Hierarchical Navigation</span>
+							<span class="onoffswitch-title-desc">Clear breakdown of nav links</span>
+						</div>
+						<div class="list" id="mdn">
+							<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" onclick="return false;"
+								class="btn btn-switch" data-action="toggle" data-class="mod-nav-dark"></a>
+							<span class="onoffswitch-title">Dark Navigation</span>
+							<span class="onoffswitch-title-desc">Navigation background is darkend</span>
+						</div>
+						<hr class="mb-0 mt-4">
+						<div class="mt-4 d-table w-100 pl-5 pr-3">
+							<div class="d-table-cell align-middle">
+								<h5 class="p-0">
+									Global Font Size
+								</h5>
+							</div>
+						</div>
+						<div class="list mt-1">
+							<div class="btn-group btn-group-sm btn-group-toggle my-2" data-toggle="buttons">
+								<label class="btn btn-default btn-sm waves-effect waves-themed"
+									data-action="toggle-swap" data-class="root-text-sm" data-target="html">
+									<input type="radio" name="changeFrontSize"> SM
+								</label>
+								<label class="btn btn-default btn-sm waves-effect waves-themed active"
+									data-action="toggle-swap" data-class="root-text" data-target="html">
+									<input type="radio" name="changeFrontSize" checked=""> MD
+								</label>
+								<label class="btn btn-default btn-sm waves-effect waves-themed"
+									data-action="toggle-swap" data-class="root-text-lg" data-target="html">
+									<input type="radio" name="changeFrontSize"> LG
+								</label>
+								<label class="btn btn-default btn-sm waves-effect waves-themed"
+									data-action="toggle-swap" data-class="root-text-xl" data-target="html">
+									<input type="radio" name="changeFrontSize"> XL
+								</label>
+							</div>
+							<span class="onoffswitch-title-desc d-block mb-0">Change <strong>root</strong> font size to
+								effect rem
+								values (resets on page refresh)</span>
+						</div>
+						<hr class="mb-0 mt-4">
+						<div class="mt-4 d-table w-100 pl-5 pr-3">
+							<div class="d-table-cell align-middle">
+								<h5 class="p-0 pr-2 d-flex">
+									Theme colors
+									<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" class="ml-auto fw-400 fs-xs"
+										data-toggle="popover" data-trigger="focus" data-placement="top" title=""
+										data-html="true"
+										data-content="The settings below uses &lt;code&gt;localStorage&lt;/code&gt; to load the external &lt;strong&gt;CSS&lt;/strong&gt; file as an overlap to the base css. Due to network latency and &lt;strong&gt;CPU utilization&lt;/strong&gt;, you may experience a brief flickering effect on page load which may show the intial applied theme for a split second. Setting the prefered style/theme in the header will prevent this from happening."
+										data-original-title="&lt;span class=&#39;text-primary&#39;&gt;&lt;i class=&#39;fal fa-exclamation-triangle mr-1&#39;&gt;&lt;/i&gt; Heads up!&lt;/span&gt;"
+										data-template="&lt;div class=&quot;popover bg-white border-white&quot; role=&quot;tooltip&quot;&gt;&lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;&lt;h3 class=&quot;popover-header bg-transparent&quot;&gt;&lt;/h3&gt;&lt;div class=&quot;popover-body fs-xs&quot;&gt;&lt;/div&gt;&lt;/div&gt;"><i
+											class="fal fa-info-circle mr-1"></i> more info</a>
+								</h5>
+							</div>
+						</div>
+						<div class="expanded theme-colors pl-5 pr-3">
+							<ul class="m-0">
+								<li>
+									<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" id="myapp-0"
+										data-action="theme-update" data-themesave="" data-theme="" data-toggle="tooltip"
+										data-placement="top" title="" data-original-title="Wisteria (base css)"></a>
+								</li>
+								<li>
+									<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" id="myapp-1"
+										data-action="theme-update" data-themesave=""
+										data-theme="css/themes/cust-theme-1.css" data-toggle="tooltip"
+										data-placement="top" title="" data-original-title="Tapestry"></a>
+								</li>
+								<li>
+									<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" id="myapp-2"
+										data-action="theme-update" data-themesave=""
+										data-theme="css/themes/cust-theme-2.css" data-toggle="tooltip"
+										data-placement="top" title="" data-original-title="Atlantis"></a>
+								</li>
+								<li>
+									<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" id="myapp-3"
+										data-action="theme-update" data-themesave=""
+										data-theme="css/themes/cust-theme-3.css" data-toggle="tooltip"
+										data-placement="top" title="" data-original-title="Indigo"></a>
+								</li>
+								<li>
+									<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" id="myapp-4"
+										data-action="theme-update" data-themesave=""
+										data-theme="css/themes/cust-theme-4.css" data-toggle="tooltip"
+										data-placement="top" title="" data-original-title="Dodger Blue"></a>
+								</li>
+								<li>
+									<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" id="myapp-5"
+										data-action="theme-update" data-themesave=""
+										data-theme="css/themes/cust-theme-5.css" data-toggle="tooltip"
+										data-placement="top" title="" data-original-title="Tradewind"></a>
+								</li>
+								<li>
+									<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" id="myapp-6"
+										data-action="theme-update" data-themesave=""
+										data-theme="css/themes/cust-theme-6.css" data-toggle="tooltip"
+										data-placement="top" title="" data-original-title="Cranberry"></a>
+								</li>
+								<li>
+									<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" id="myapp-7"
+										data-action="theme-update" data-themesave=""
+										data-theme="css/themes/cust-theme-7.css" data-toggle="tooltip"
+										data-placement="top" title="" data-original-title="Oslo Gray"></a>
+								</li>
+								<li>
+									<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" id="myapp-8"
+										data-action="theme-update" data-themesave=""
+										data-theme="css/themes/cust-theme-8.css" data-toggle="tooltip"
+										data-placement="top" title="" data-original-title="Chetwode Blue"></a>
+								</li>
+								<li>
+									<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" id="myapp-9"
+										data-action="theme-update" data-themesave=""
+										data-theme="css/themes/cust-theme-9.css" data-toggle="tooltip"
+										data-placement="top" title="" data-original-title="Apricot"></a>
+								</li>
+								<li>
+									<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" id="myapp-10"
+										data-action="theme-update" data-themesave=""
+										data-theme="css/themes/cust-theme-10.css" data-toggle="tooltip"
+										data-placement="top" title="" data-original-title="Blue Smoke"></a>
+								</li>
+								<li>
+									<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" id="myapp-11"
+										data-action="theme-update" data-themesave=""
+										data-theme="css/themes/cust-theme-11.css" data-toggle="tooltip"
+										data-placement="top" title="" data-original-title="Green Smoke"></a>
+								</li>
+								<li>
+									<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" id="myapp-12"
+										data-action="theme-update" data-themesave=""
+										data-theme="css/themes/cust-theme-12.css" data-toggle="tooltip"
+										data-placement="top" title="" data-original-title="Wild Blue Yonder"></a>
+								</li>
+								<li>
+									<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" id="myapp-13"
+										data-action="theme-update" data-themesave=""
+										data-theme="css/themes/cust-theme-13.css" data-toggle="tooltip"
+										data-placement="top" title="" data-original-title="Emerald"></a>
+								</li>
+								<li>
+									<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" id="myapp-14"
+										data-action="theme-update" data-themesave=""
+										data-theme="css/themes/cust-theme-14.css" data-toggle="tooltip"
+										data-placement="top" title="" data-original-title="Supernova"></a>
+								</li>
+								<li>
+									<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" id="myapp-15"
+										data-action="theme-update" data-themesave=""
+										data-theme="css/themes/cust-theme-15.css" data-toggle="tooltip"
+										data-placement="top" title="" data-original-title="Hoki"></a>
+								</li>
+							</ul>
+						</div>
+						<hr class="mb-0 mt-4">
+						<div class="mt-4 d-table w-100 pl-5 pr-3">
+							<div class="d-table-cell align-middle">
+								<h5 class="p-0 pr-2 d-flex">
+									Theme Modes (beta)
+									<a href="https://10.6.0.4:8443/atr/theme_3/dist/#" class="ml-auto fw-400 fs-xs"
+										data-toggle="popover" data-trigger="focus" data-placement="top" title=""
+										data-html="true"
+										data-content="This is a brand new technique we are introducing which uses CSS variables to infiltrate color options. While this has been working nicely on modern browsers without much issues, some users &lt;strong&gt;may still face issues on Internet Explorer &lt;/strong&gt;. Until these issues are resolved or Internet Explorer improves, this feature will remain in Beta"
+										data-original-title="&lt;span class=&#39;text-primary&#39;&gt;&lt;i class=&#39;fal fa-question-circle mr-1&#39;&gt;&lt;/i&gt; Why beta?&lt;/span&gt;"
+										data-template="&lt;div class=&quot;popover bg-white border-white&quot; role=&quot;tooltip&quot;&gt;&lt;div class=&quot;arrow&quot;&gt;&lt;/div&gt;&lt;h3 class=&quot;popover-header bg-transparent&quot;&gt;&lt;/h3&gt;&lt;div class=&quot;popover-body fs-xs&quot;&gt;&lt;/div&gt;&lt;/div&gt;"><i
+											class="fal fa-question-circle mr-1"></i> why beta?</a>
+								</h5>
+							</div>
+						</div>
+						<div class="pl-5 pr-3 py-3">
+							<div class="ie-only alert alert-warning d-none">
+								<h6>Internet Explorer Issue</h6>
+								This particular component may not work as expected in Internet Explorer. Please use with
+								caution.
+							</div>
+							<div class="row no-gutters">
+								<div class="col-4 pr-2 text-center">
+									<div id="skin-default" data-action="toggle-replace"
+										data-replaceclass="mod-skin-light mod-skin-dark" data-class=""
+										data-toggle="tooltip" data-placement="top" title=""
+										class="d-flex bg-white border border-primary rounded overflow-hidden text-success js-waves-on waves-effect waves-themed"
+										data-original-title="Default Mode" style="height: 80px">
+										<div
+											class="bg-primary-600 bg-primary-gradient px-2 pt-0 border-right border-primary">
+										</div>
+										<div class="d-flex flex-column flex-1">
+											<div class="bg-white border-bottom border-primary py-1"></div>
+											<div class="bg-faded flex-1 pt-3 pb-3 px-2">
+												<div class="py-3"
+													style="background:url(&#39;img/demo/s-1.png&#39;) top left no-repeat;background-size: 100%;">
+												</div>
+											</div>
+										</div>
+									</div>
+									Default
+								</div>
+								<div class="col-4 px-1 text-center">
+									<div id="skin-light" data-action="toggle-replace" data-replaceclass="mod-skin-dark"
+										data-class="mod-skin-light" data-toggle="tooltip" data-placement="top" title=""
+										class="d-flex bg-white border border-secondary rounded overflow-hidden text-success js-waves-on waves-effect waves-themed"
+										data-original-title="Light Mode" style="height: 80px">
+										<div class="bg-white px-2 pt-0 border-right border-"></div>
+										<div class="d-flex flex-column flex-1">
+											<div class="bg-white border-bottom border- py-1"></div>
+											<div class="bg-white flex-1 pt-3 pb-3 px-2">
+												<div class="py-3"
+													style="background:url(&#39;img/demo/s-1.png&#39;) top left no-repeat;background-size: 100%;">
+												</div>
+											</div>
+										</div>
+									</div>
+									Light
+								</div>
+								<div class="col-4 pl-2 text-center">
+									<div id="skin-dark" data-action="toggle-replace" data-replaceclass="mod-skin-light"
+										data-class="mod-skin-dark" data-toggle="tooltip" data-placement="top" title=""
+										class="d-flex bg-white border border-dark rounded overflow-hidden text-success js-waves-on waves-effect waves-themed"
+										data-original-title="Dark Mode" style="height: 80px">
+										<div class="bg-fusion-500 px-2 pt-0 border-right"></div>
+										<div class="d-flex flex-column flex-1">
+											<div class="bg-fusion-600 border-bottom py-1"></div>
+											<div class="bg-fusion-300 flex-1 pt-3 pb-3 px-2">
+												<div class="py-3 opacity-30"
+													style="background:url(&#39;img/demo/s-1.png&#39;) top left no-repeat;background-size: 100%;">
+												</div>
+											</div>
+										</div>
+									</div>
+									Dark
+								</div>
+							</div>
+						</div>
+						<hr class="mb-0 mt-4">
+						<div class="pl-5 pr-3 py-3 bg-faded">
+							<div class="row no-gutters">
+								<div class="col-6 pr-1">
+									<a href="https://10.6.0.4:8443/atr/theme_3/dist/#"
+										class="btn btn-outline-danger fw-500 btn-block waves-effect waves-themed"
+										data-action="app-reset">Reset Settings</a>
+								</div>
+								<div class="col-6 pl-1">
+									<a href="https://10.6.0.4:8443/atr/theme_3/dist/#"
+										class="btn btn-danger fw-500 btn-block waves-effect waves-themed"
+										data-action="factory-reset">Factory Reset</a>
+								</div>
+							</div>
+						</div>
+					</div> <span id="saving"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END PAGE_SETTINGS -->
+
+	<!-- COMMON JS -->
+	<section>
+		<!-- base vendor bundle: 
+			 DOC: if you remove pace.js from core please note on Internet Explorer some CSS animations may execute before a page is fully loaded, resulting 'jump' animations 
+						+ pace.js (recommended)
+						+ jquery.js (core)
+						+ jquery-ui-cust.js (core)
+						+ popper.js (core)
+						+ bootstrap.js (core)
+						+ slimscroll.js (extension)
+						+ app.navigation.js (core)
+						+ ba-throttle-debounce.js (core)
+						+ waves.js (extension)
+						+ smartpanels.js (extension)
+						+ src/../jquery-snippets.js (core) -->
+		<script src="./_Ethical_ powered by Finarya_files/vendors.bundle.js.download"></script>
+		<script src="./_Ethical_ powered by Finarya_files/app.bundle.js.download"></script>
+		<!-- DOC: script to save and load page settings -->
+		<script src="./_Ethical_ powered by Finarya_files/theme_settings_loader.js.download"
+			type="text/javascript"></script>
+		<script src="./_Ethical_ powered by Finarya_files/bootstrap-datepicker.js.download"
+			type="text/javascript"></script>
+		<script src="./_Ethical_ powered by Finarya_files/select2.bundle.js.download" type="text/javascript"></script>
+		<script src="./_Ethical_ powered by Finarya_files/sweetalert2.bundle.js.download"
+			type="text/javascript"></script>
+		<script src="./_Ethical_ powered by Finarya_files/smartwizard.js.download" type="text/javascript"></script>
+
+		<!-- start excel plugin js -->
+		<script src="./_Ethical_ powered by Finarya_files/xspreadsheet.js.download"></script>
+		<!-- <script th:src="@{/theme_3/dist/js/excel/xspreadsheet.js.map}"></script> -->
+		<!-- end excel plugin js -->
+		<!-- dateRangePicker RM Start js -->
+		<script src="./_Ethical_ powered by Finarya_files/moment.min.js.download" type="text/javascript"></script>
+		<script src="./_Ethical_ powered by Finarya_files/bootstrap-daterangepicker.js.download"
+			type="text/javascript"></script>
+		<!-- dateRangePicker RM Start js -->
+		<script src="./_Ethical_ powered by Finarya_files/tablesort.js.download" type="text/javascript"></script>
+		<script src="./_Ethical_ powered by Finarya_files/canvas2image.js.download"></script>
+		<script src="./_Ethical_ powered by Finarya_files/html2canvas.min.js.download"></script>
+		<script src="./_Ethical_ powered by Finarya_files/FinaryaMain.js.download"></script>
+		<script src="./_Ethical_ powered by Finarya_files/jodit.min.js.download"></script>
+
+		<!-- Start Animated full Screen Modal js -->
+		<script src="./_Ethical_ powered by Finarya_files/animatedModal.js.download"></script>
+		<script src="./_Ethical_ powered by Finarya_files/readmore.min.js.download"></script>
+		<!-- end Animated full Screen Modal js -->
+
+
+		<script src="./_Ethical_ powered by Finarya_files/mustache.min.js.download"></script>
+		<script>
+			$(document).ready(function () { // makes sure the whole site is loaded 
+				$('#status').fadeOut(); // will first fade out the loading animation 
+				$('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+				$('body').delay(350).css({
+					'overflow': 'visible'
+				});
+			});
+		</script>
+		<script>
+			initApp.listFilter($('#js-nav-menu'), $('#csi_rm_header_list_3030_filter'));
+			initApp.buildNavigation($('#js-nav-menu'));
+		</script>
+		<script src="./_Ethical_ powered by Finarya_files/context_path_adjustment.js.download"></script>
+		<script src="./_Ethical_ powered by Finarya_files/session_management.js.download"></script>
+		<script src="./_Ethical_ powered by Finarya_files/sanitizer_for_xss.js.download"></script>
+	</section>
+	<!-- END COMMON JS -->
+
+	<!-- page specific JS -->
+	<div>
+		<script src="./_Ethical_ powered by Finarya_files/landing_page.js.download"></script>
+	</div>
+
+
+
+
+
+	<!-- CUSTOM SLIDE-OUT SIDEBAR PANEL -->
+	<style>
+		.custom-sidebar-overlay {
+			position: fixed;
+			top: 122px;
+			/* Positioned below the top headers and horizontal navigation bar */
+			left: 0;
+			width: 100vw;
+			height: calc(100vh - 122px);
+			background-color: rgba(0, 0, 0, 0.4);
+			z-index: 2200;
+			display: none;
+			backdrop-filter: blur(2px);
+		}
+
+		.custom-sidebar-overlay.open {
+			display: block;
+		}
+
+		.custom-sidebar-panel {
+			position: fixed;
+			top: 122px;
+			/* Positioned below the top headers and horizontal navigation bar */
+			left: -320px;
+			width: 320px;
+			height: calc(100vh - 122px);
+			background-color: #093252;
+			/* Brand Blue */
+			box-shadow: 4px 0 15px rgba(0, 0, 0, 0.15);
+			z-index: 2210;
+			transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+			display: flex;
+			flex-direction: column;
+			box-sizing: border-box;
+			font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			border-right: 1px solid rgba(255, 255, 255, 0.1);
+		}
+
+		.custom-sidebar-panel.open {
+			left: 0;
+		}
+
+		.custom-sidebar-header-container {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 15px 15px 5px 15px;
+		}
+
+		.custom-sidebar-close-btn {
+			background: none;
+			border: none;
+			font-size: 20px;
+			color: #e6f2ff;
+			cursor: pointer;
+			padding: 5px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			outline: none;
+			transition: color 0.2s;
+		}
+
+		.custom-sidebar-close-btn:hover {
+			color: #ffdb3a;
+		}
+
+		.custom-mini-card {
+			display: flex;
+			background: #ffffff;
+			border: 1px solid #ff7b7c;
+			border-radius: 4px;
+			overflow: hidden;
+			height: 50px;
+			align-items: center;
+			flex: 1;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+		}
+
+		.custom-mini-card-left {
+			width: 60px;
+			height: 100%;
+			background: linear-gradient(135deg, #ff9f43, #ff6b6b);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			overflow: hidden;
+		}
+
+		.custom-mini-card-left img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		.custom-mini-card-center {
+			flex: 1;
+			padding-left: 12px;
+			font-weight: 700;
+			font-size: 11px;
+			color: #093252;
+			/* Match brand blue */
+			letter-spacing: 0.5px;
+		}
+
+		.custom-mini-card-right {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding-right: 12px;
+		}
+
+		.custom-mini-card-right img {
+			width: 20px;
+			height: 20px;
+		}
+
+		.custom-search-container {
+			padding: 10px 15px;
+		}
+
+		.custom-search-wrapper {
+			position: relative;
+			display: flex;
+			align-items: center;
+			background-color: rgba(255, 255, 255, 0.1);
+			border: 1px solid rgba(255, 255, 255, 0.25);
+			border-radius: 4px;
+			padding: 8px 12px;
+			box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+		}
+
+		.custom-search-wrapper i {
+			color: #fff;
+			margin-right: 10px;
+			font-size: 14px;
+		}
+
+		.custom-search-input {
+			border: none;
+			outline: none;
+			width: 100%;
+			font-size: 14px;
+			color: #fff;
+			background: transparent;
+		}
+
+		.custom-search-input::placeholder {
+			color: rgba(255, 255, 255, 0.6);
+		}
+
+		.custom-menu-content {
+			flex: 1;
+			overflow-y: auto;
+			padding: 10px 15px;
+		}
+
+		.custom-menu-group {
+			margin-bottom: 15px;
+			background: rgba(255, 255, 255, 0.05);
+			border-radius: 6px;
+			overflow: hidden;
+			border: 1px solid rgba(255, 255, 255, 0.08);
+		}
+
+		.custom-menu-header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			cursor: pointer;
+			padding: 12px;
+			font-weight: bold;
+			color: #ffffff;
+			/* White text for header */
+			font-size: 14px;
+			background-color: rgba(255, 255, 255, 0.08);
+			border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+			user-select: none;
+		}
+
+		.custom-menu-header:hover {
+			background-color: rgba(255, 255, 255, 0.15);
+		}
+
+		.custom-menu-header i {
+			transition: transform 0.2s;
+			font-size: 12px;
+			color: #ffffff;
+		}
+
+		.custom-submenu-list {
+			list-style: none;
+			padding: 5px 0;
+			margin: 0;
+			display: none;
+		}
+
+		.custom-submenu-item {
+			margin: 2px 0;
+		}
+
+		.custom-submenu-toggle {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			cursor: pointer;
+			padding: 8px 15px;
+			color: #e6f2ff;
+			/* Light blue text */
+			font-size: 13px;
+			font-weight: 600;
+			user-select: none;
+		}
+
+		.custom-submenu-toggle:hover {
+			background-color: rgba(255, 255, 255, 0.08);
+			color: #fff;
+		}
+
+		.custom-submenu-toggle i {
+			font-size: 10px;
+			transition: transform 0.2s;
+			color: #e6f2ff;
+		}
+
+		.custom-leaf-list {
+			list-style: none;
+			padding: 0 0 5px 15px;
+			margin: 0;
+			display: none;
+		}
+
+		.custom-leaf-item {
+			margin: 1px 0;
+		}
+
+		.custom-leaf-link {
+			display: block;
+			padding: 6px 15px;
+			color: #ffffff;
+			/* White links text */
+			text-decoration: none;
+			font-size: 12.5px;
+			border-radius: 4px;
+			transition: all 0.2s;
+			position: relative;
+		}
+
+		.custom-leaf-link:hover {
+			background-color: rgba(255, 255, 255, 0.12);
+			color: #ffdb3a;
+			/* Gold text highlight on hover */
+			padding-left: 18px;
+			text-decoration: none;
+		}
+
+		.custom-leaf-link::before {
+			content: "\2022";
+			color: #ffdb3a;
+			/* Gold bullet point */
+			font-weight: bold;
+			display: inline-block;
+			width: 1em;
+			margin-left: -1em;
+		}
+	</style>
+	color: #0464ad;
+	padding-left: 18px;
+	text-decoration: none;
+	}
+	.custom-leaf-link::before {
+	content: "\2022";
+	color: #1375bc;
+	font-weight: bold;
+	display: inline-block;
+	width: 1em;
+	margin-left: -1em;
+	}
+	</style>
+
+	<div id="customSidebarOverlay" class="custom-sidebar-overlay" onclick="toggleCustomSidebar(false)"></div>
+
+	<div id="customSidebarPanel" class="custom-sidebar-panel">
+		<!-- Sidebar Header containing the Small Tile -->
+		<div class="custom-sidebar-header-container">
+			<div class="custom-mini-card">
+				<div class="custom-mini-card-left">
+					<img src="./_Ethical_ powered by Finarya_files/02_cards_colour_images.png" alt="Logo">
+				</div>
+				<div class="custom-mini-card-center">
+					ATR Management
+				</div>
+				<div class="custom-mini-card-right">
+					<img src="./_Ethical_ powered by Finarya_files/02 icon_risk_management.svg" alt="Shield">
+				</div>
+			</div>
+			<button class="custom-sidebar-close-btn" onclick="toggleCustomSidebar(false)">
+				
+			</button>
+		</div>
+
+		<!-- Search Input Option -->
+		<div class="custom-search-container">
+			<div class="custom-search-wrapper">
+				<i class="fas fa-search"></i>
+				<input type="text" id="customSidebarSearch" class="custom-search-input" placeholder="Search Here..."
+					onkeyup="filterCustomMenu()">
+			</div>
+		</div>
+
+		<!-- Collapsible menus for Admin & ATR Management Module -->
+		<div class="custom-menu-content">
+			<!-- Admin Menu Group -->
+			<div class="custom-menu-group">
+				<div class="custom-menu-header" onclick="toggleCustomSection('submenu-admin')">
+					<span>Admin</span>
+					<i class="fas fa-chevron-down" id="arrow-submenu-admin"></i>
+				</div>
+				<ul id="submenu-admin" class="custom-submenu-list">
+					<!-- Department Workbench -->
+					<li class="custom-submenu-item">
+						<div class="custom-submenu-toggle" onclick="toggleCustomSection('submenu-admin-dept')">
+							<span>Department Workbench</span>
+							<i class="fas fa-chevron-down" id="arrow-submenu-admin-dept"></i>
+						</div>
+						<ul id="submenu-admin-dept" class="custom-leaf-list">
+							<li class="custom-leaf-item"><a href="https://10.6.0.4:8443/atr/showCreateDepartmentPage"
+									class="custom-leaf-link">Create Department</a></li>
+							<li class="custom-leaf-item"><a href="https://10.6.0.4:8443/atr/showListDepartmentsPage"
+									class="custom-leaf-link">List Department</a></li>
+						</ul>
+					</li>
+					<!-- Application Roles -->
+					<li class="custom-submenu-item">
+						<div class="custom-submenu-toggle" onclick="toggleCustomSection('submenu-admin-roles')">
+							<span>Application Roles</span>
+							<i class="fas fa-chevron-down" id="arrow-submenu-admin-roles"></i>
+						</div>
+						<ul id="submenu-admin-roles" class="custom-leaf-list">
+							<li class="custom-leaf-item"><a
+									href="https://10.6.0.4:8443/atr/showCreateApplicationRolePage"
+									class="custom-leaf-link">Create Application Roles</a></li>
+							<li class="custom-leaf-item"><a
+									href="https://10.6.0.4:8443/atr/showListApplicationRolesPage"
+									class="custom-leaf-link">List Application Roles</a></li>
+						</ul>
+					</li>
+					<!-- User Management -->
+					<li class="custom-submenu-item">
+						<div class="custom-submenu-toggle" onclick="toggleCustomSection('submenu-admin-users')">
+							<span>User Management</span>
+							<i class="fas fa-chevron-down" id="arrow-submenu-admin-users"></i>
+						</div>
+						<ul id="submenu-admin-users" class="custom-leaf-list">
+							<li class="custom-leaf-item"><a href="https://10.6.0.4:8443/atr/showCreateUserPage2"
+									class="custom-leaf-link">Create User</a></li>
+							<li class="custom-leaf-item"><a href="https://10.6.0.4:8443/atr/showListUserPage"
+									class="custom-leaf-link">List User</a></li>
+							<li class="custom-leaf-item"><a href="https://10.6.0.4:8443/atr/showListOfLoginUsers"
+									class="custom-leaf-link">List Of LoggedIn Users</a></li>
+						</ul>
+					</li>
+					<!-- Generic Data Master -->
+					<li class="custom-submenu-item">
+						<div class="custom-submenu-toggle" onclick="toggleCustomSection('submenu-admin-generic')">
+							<span>Generic Data Master</span>
+							<i class="fas fa-chevron-down" id="arrow-submenu-admin-generic"></i>
+						</div>
+						<ul id="submenu-admin-generic" class="custom-leaf-list">
+							<li class="custom-leaf-item"><a
+									href="https://10.6.0.4:8443/atr/showCreateMasterGenericDropDownPage"
+									class="custom-leaf-link">Create Generic Data</a></li>
+							<li class="custom-leaf-item"><a href="https://10.6.0.4:8443/atr/showListGenericDropDownPage"
+									class="custom-leaf-link">List Generic Data</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+			<!-- ATR Management Module Group -->
+			<div class="custom-menu-group">
+				<div class="custom-menu-header" onclick="toggleCustomSection('submenu-atr')">
+					<span>ATR Management Module</span>
+					<i class="fas fa-chevron-down" id="arrow-submenu-atr"></i>
+				</div>
+				<ul id="submenu-atr" class="custom-submenu-list">
+					<!-- Actionable -->
+					<li class="custom-submenu-item">
+						<div class="custom-submenu-toggle" onclick="toggleCustomSection('submenu-atr-actionable')">
+							<span>Actionable</span>
+							<i class="fas fa-chevron-down" id="arrow-submenu-atr-actionable"></i>
+						</div>
+						<ul id="submenu-atr-actionable" class="custom-leaf-list">
+							<li class="custom-leaf-item"><a href="https://10.6.0.4:8443/atr/showCreateActionablePage"
+									class="custom-leaf-link">Create Actionable</a></li>
+							<li class="custom-leaf-item"><a href="https://10.6.0.4:8443/atr/showListOfMyActionablePage"
+									class="custom-leaf-link">List My Actionables</a></li>
+							<li class="custom-leaf-item"><a href="https://10.6.0.4:8443/atr/showListOfAllActionablePage"
+									class="custom-leaf-link">List All Actionables</a></li>
+							<li class="custom-leaf-item"><a
+									href="https://10.6.0.4:8443/atr/showListOfActionableForResponsePage"
+									class="custom-leaf-link">List Actionables pending for response review</a></li>
+							<li class="custom-leaf-item"><a
+									href="https://10.6.0.4:8443/atr/showListOfAllActionablesForDeptHead"
+									class="custom-leaf-link">List All Actionables for Department Head</a></li>
+							<li class="custom-leaf-item"><a
+									href="https://10.6.0.4:8443/atr/showListOfActionablePageForApproval"
+									class="custom-leaf-link">List of Pending Actionables for approval</a></li>
+						</ul>
+					</li>
+					<!-- Action Requests -->
+					<li class="custom-submenu-item">
+						<div class="custom-submenu-toggle" onclick="toggleCustomSection('submenu-atr-requests')">
+							<span>Action Requests</span>
+							<i class="fas fa-chevron-down" id="arrow-submenu-atr-requests"></i>
+						</div>
+						<ul id="submenu-atr-requests" class="custom-leaf-list">
+							<li class="custom-leaf-item"><a
+									href="https://10.6.0.4:8443/atr/showListOfAssignedActionRequestPage"
+									class="custom-leaf-link">List assigned Action Requests</a></li>
+						</ul>
+					</li>
+					<!-- Reports -->
+					<li class="custom-submenu-item">
+						<div class="custom-submenu-toggle" onclick="toggleCustomSection('submenu-atr-reports')">
+							<span>Reports</span>
+							<i class="fas fa-chevron-down" id="arrow-submenu-atr-reports"></i>
+						</div>
+						<ul id="submenu-atr-reports" class="custom-leaf-list">
+							<li class="custom-leaf-item"><a href="https://10.6.0.4:8443/atr/showActionableReporPage"
+									class="custom-leaf-link">Actionable Report</a></li>
+						</ul>
+					</li>
+					<!-- Bulk Upload Actionable -->
+					<li class="custom-submenu-item">
+						<div class="custom-submenu-toggle" onclick="toggleCustomSection('submenu-atr-bulk')">
+							<span>Bulk Upload Actionable</span>
+							<i class="fas fa-chevron-down" id="arrow-submenu-atr-bulk"></i>
+						</div>
+						<ul id="submenu-atr-bulk" class="custom-leaf-list">
+							<li class="custom-leaf-item"><a
+									href="https://10.6.0.4:8443/atr/showViewBulkUploadActionables"
+									class="custom-leaf-link">Bulk Upload Actionable</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		$(document).ready(function () {
+			$('.csi-Ethical-card-border-color-2').on('click', function (e) {
+				e.stopPropagation();
+				e.preventDefault();
+				toggleCustomSidebar(true);
+			});
+		});
+
+		function toggleCustomSidebar(show) {
+			var panel = document.getElementById('customSidebarPanel');
+			var overlay = document.getElementById('customSidebarOverlay');
+			if (show) {
+				panel.classList.add('open');
+				overlay.classList.add('open');
+			} else {
+				panel.classList.remove('open');
+				overlay.classList.remove('open');
+			}
+		}
+
+		function toggleCustomSection(id) {
+			var section = document.getElementById(id);
+			var arrow = document.getElementById('arrow-' + id);
+			if (section.style.display === "block") {
+				section.style.display = "none";
+				if (arrow) arrow.style.transform = "rotate(0deg)";
+			} else {
+				section.style.display = "block";
+				if (arrow) arrow.style.transform = "rotate(180deg)";
+			}
+		}
+
+		function filterCustomMenu() {
+			var input = document.getElementById('customSidebarSearch');
+			var filter = input.value.toLowerCase();
+
+			var links = document.querySelectorAll('#customSidebarPanel .custom-leaf-link');
+
+			if (filter === "") {
+				// Reset all displays and chevron styles
+				links.forEach(function (link) {
+					link.parentElement.style.display = "";
+					link.style.backgroundColor = "";
+				});
+				document.querySelectorAll('#customSidebarPanel ul').forEach(function (ul) {
+					ul.style.display = "none";
+				});
+				document.querySelectorAll('#customSidebarPanel .custom-submenu-toggle').forEach(function (toggle) {
+					toggle.style.display = "";
+				});
+				document.querySelectorAll('#customSidebarPanel .custom-submenu-item').forEach(function (item) {
+					item.style.display = "";
+				});
+				document.querySelectorAll('#customSidebarPanel .custom-menu-group').forEach(function (group) {
+					group.style.display = "";
+				});
+				document.querySelectorAll('#customSidebarPanel i').forEach(function (icon) {
+					if (icon.id && icon.id.indexOf('arrow-') === 0) {
+						icon.style.transform = "rotate(0deg)";
+					}
+				});
+				return;
+			}
+
+			// Hide everything by default
+			links.forEach(function (link) {
+				link.parentElement.style.display = "none";
+				link.style.backgroundColor = "";
+			});
+			document.querySelectorAll('#customSidebarPanel .custom-submenu-toggle').forEach(function (toggle) {
+				toggle.style.display = "none";
+			});
+			document.querySelectorAll('#customSidebarPanel .custom-submenu-item').forEach(function (item) {
+				item.style.display = "none";
+			});
+			document.querySelectorAll('#customSidebarPanel .custom-menu-group').forEach(function (group) {
+				group.style.display = "none";
+			});
+
+			links.forEach(function (link) {
+				var text = link.textContent.toLowerCase();
+				if (text.indexOf(filter) > -1) {
+					// Match found! Show the link and highlight it
+					link.parentElement.style.display = "";
+					link.style.backgroundColor = "#ffcaa3";
+
+					// Show parents upward
+					var parent = link.parentElement;
+					while (parent && parent.id !== "customSidebarPanel") {
+						if (parent.tagName === "UL") {
+							parent.style.display = "block";
+							var arrow = document.getElementById('arrow-' + parent.id);
+							if (arrow) {
+								arrow.style.transform = "rotate(180deg)";
+							}
+						}
+						if (parent.tagName === "LI") {
+							parent.style.display = "block";
+							// Show the toggle sibling if it's a submenu list
+							var toggle = parent.querySelector('.custom-submenu-toggle');
+							if (toggle) toggle.style.display = "flex";
+						}
+						if (parent.classList.contains('custom-menu-group')) {
+							parent.style.display = "block";
+						}
+						parent = parent.parentElement;
+					}
+				}
+			});
+		}
+	</script>
+</body>
+
+</html>
